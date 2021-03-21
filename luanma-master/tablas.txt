@@ -1,0 +1,94 @@
+VREAR TABLAS
+
+CREATE TABLE usuario_artista(usuarioArtista_id VARCHAR(30), correo VARCHAR(50),contrasena VARCHAR(70), nombre VARCHAR(50),
+							PRIMARY KEY (usuarioArtista_id));
+CREATE TABLE artista (artista_id SERIAL, nombre VARCHAR(50), PRIMARY KEY(artista_id));
+
+CREATE TABLE album  (album_id SERIAL, nombre VARCHAR(50), artista_id SERIAL, PRIMARY KEY (album_id),
+					FOREIGN KEY (artista_id) REFERENCES artista(artista_id) ON DELETE CASCADE ON UPDATE CASCADE);
+--activada es 0 e inactivada 1
+CREATE TABLE cancion (cancion_id SERIAL, nombre VARCHAR(50), enlace VARCHAR(50),genero VARCHAR(50), artista_id SERIAL,
+					 album_id SERIAL, activada INT, PRIMARY KEY(cancion_id), FOREIGN KEY (artista_id) REFERENCES artista(artista_id) ON DELETE CASCADE ON UPDATE CASCADE,
+					 FOREIGN KEY (album_id) REFERENCES album(album_id) ON DELETE CASCADE ON UPDATE CASCADE);
+					 
+CREATE TABLE administrador (administrador_id SERIAL, correo VARCHAR(50), contrasena VARCHAR(50), PRIMARY KEY (administrador_id));
+
+CREATE TABLE usuario (usuario_id VARCHAR(50), correo VARCHAR(50), contrasena VARCHAR(50), nombreUsuario VARCHAR(50), suscripcion INT,
+					 PRIMARY KEY (usuario_id));
+CREATE TABLE reproducciones (cancion_id SERIAL, usuario_id VARCHAR(50), FOREIGN KEY (cancion_id) REFERENCES 
+							cancion(cancion_id), FOREIGN KEY (usuario_id) REFERENCES usuario(usuario_id) ON DELETE CASCADE ON UPDATE CASCADE);
+
+CREATE TABLE playlist (playlist_id SERIAL, nombre VARCHAR(50), usuario_id VARCHAR(50), primary key (playlist_id), 
+					  FOREIGN KEY (usuario_id) REFERENCES usuario(usuario_id) ON DELETE CASCADE ON UPDATE CASCADE);
+					  
+CREATE TABLE canciones_playlist(playlist_id SERIAL, cancion_id SERIAL, FOREIGN KEY (playlist_id) REFERENCES
+							   playlist(playlist_id) ON DELETE CASCADE ON UPDATE CASCADE, FOREIGN KEY (cancion_id) REFERENCES cancion(cancion_id) ON DELETE CASCADE ON UPDATE CASCADE);
+INSERTAR THE KILLERS / indie rock
+
+INSERT INTO artista(nombre) VALUES ('The Killers');
+
+INSERT INTO album (nombre, artista_id) VALUES ('Imploding the Mirage',01);
+
+INSERT INTO cancion(nombre, enlace, genero,artista_id,album_id, activada) 
+VALUES ('My Own Souls Warning', 'https://www.youtube.com/watch?v=4go_DzY8wHc', 'indie rock', 01,01,0);
+
+INSERT INTO cancion(nombre, enlace, genero,artista_id,album_id,activada) 
+VALUES ('Blowback', 'https://www.youtube.com/watch?v=vftnkHjTxs4', 'indie rock', 01,01,0);
+
+INSERT INTO cancion(nombre, enlace, genero,artista_id,album_id,activada) 
+VALUES ('Dying Breed', 'https://www.youtube.com/watch?v=tOeV-efObZY', 'indie rock', 01,01,0);
+
+INSERT INTO cancion(nombre, enlace, genero,artista_id,album_id,activada) 
+VALUES ('Caution', 'https://www.youtube.com/watch?v=WrpBgN_iUnA', 'indie rock', 01,01,0);
+
+INSERT INTO cancion(nombre, enlace, genero,artista_id,album_id,activada) 
+VALUES ('Lightning Fields', 'https://www.youtube.com/watch?v=t031t3U5EV8', 'indie rock', 01,01,0);
+
+INSERT INTO cancion(nombre, enlace, genero,artista_id,album_id,activada) 
+VALUES ('Fire In Bone', 'https://www.youtube.com/watch?v=3Nx24VAjK6Q', 'indie rock', 01,01,0);
+
+INSERT INTO cancion(nombre, enlace, genero,artista_id,album_id,activada) 
+VALUES ('Running Towards a Place', 'https://www.youtube.com/watch?v=pdoopHVTdUA', 'indie rock', 01,01,0);
+
+INSERT INTO cancion(nombre, enlace, genero,artista_id,album_id,activada) 
+VALUES ('My God', 'https://www.youtube.com/watch?v=7W8ghuBKBkc', 'indie rock', 01,01,0);
+
+INSERT INTO cancion(nombre, enlace, genero,artista_id,album_id,activada) 
+VALUES ('When the Dreams Run Dry', 'https://www.youtube.com/watch?v=0fCzAzNq0e8', 'indie rock', 01,01,0);
+
+INSERT INTO cancion(nombre, enlace, genero,artista_id,album_id,activada) 
+VALUES ('Imploding the Mirage', 'https://www.youtube.com/watch?v=hrazTo8xVds', 'indie rock', 01,01,0);
+
+INSERTAR MARC ANTHONY / salsa
+INSERT INTO artista (nombre) VALUES ('Marc Anthony');
+INSERT INTO album (nombre, artista_id) VALUES ('3.0',02);
+
+INSERT INTO cancion (nombre, enlace,genero,artista_id, album_id,activada)
+VALUES ('Vivir mi Vida', 'https://www.youtube.com/watch?v=YXnjy5YlDwk', 'salsa',02,02,0);
+
+INSERT INTO cancion (nombre, enlace,genero,artista_id, album_id,activada)
+VALUES ('Volver a Comenzar', 'https://www.youtube.com/watch?v=z48Dd_URjlQ', 'salsa',02,02,0);
+
+INSERT INTO cancion (nombre, enlace,genero,artista_id, album_id,activada)
+VALUES ('Flor Palida', 'https://www.youtube.com/watch?v=3VmoZrxXbmg', 'salsa',02,02,0);
+
+INSERT INTO cancion (nombre, enlace,genero,artista_id, album_id,activada)
+VALUES ('Cambio de Piel', 'https://www.youtube.com/watch?v=-u6w90uQhTI', 'salsa',02,02,0);
+
+INSERT INTO cancion (nombre, enlace,genero,artista_id, album_id,activada)
+VALUES ('Espera', 'https://www.youtube.com/watch?v=js-EY3QYzcI', 'salsa',02,02,0);
+
+INSERT INTO cancion (nombre, enlace,genero,artista_id, album_id,activada)
+VALUES ('La Copa Rota', 'https://www.youtube.com/watch?v=oHEtyTePEnc', 'salsa',02,02,0);
+
+INSERT INTO cancion (nombre, enlace,genero,artista_id, album_id,activada)
+VALUES ( 'Dime si No es Verdad', 'https://www.youtube.com/watch?v=EqlX3jUv-a0', 'salsa',02,02,0);
+
+INSERT INTO cancion (nombre, enlace,genero,artista_id, album_id,activada)
+VALUES ('Hipocresía', 'https://www.youtube.com/watch?v=cCt1qAML8ZQ', 'salsa',02,02,0);
+
+INSERT INTO cancion (nombre, enlace,genero,artista_id, album_id,activada)
+VALUES ('Cautivo de este Amor', 'https://www.youtube.com/watch?v=ARAi0XaC-lY', 'salsa',02,02,0);
+
+INSERT INTO cancion (nombre, enlace,genero,artista_id, album_id,activada)
+VALUES ('Vivir mi Vida cover Khaled', 'https://www.youtube.com/watch?v=CXfeBvYLliw', 'salsa',02,02,0);
