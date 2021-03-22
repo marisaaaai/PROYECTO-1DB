@@ -114,6 +114,6 @@ export default reduxForm({
     modSuccess: selectors.getModSuccess(state),
     albums: selectors.getAlbums(state),
     artists: selectors.getArtists(state),
-    loggedUser: selectors.getUser(state),
+    loggedUser: selectors.getUserName(state),
   }))(ModAlbum)
 );

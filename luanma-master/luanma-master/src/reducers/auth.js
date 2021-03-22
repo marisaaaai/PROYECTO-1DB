@@ -27,7 +27,7 @@ const authInfo = (
       };
     case types.LOGIN_SUCCESS:
     case types.REGISTER_SUCCES:
-      console.log("Llegaaaaa")
+      console.log("Llegaaaaa");
       return {
         ...state,
         ...action.payload,
@@ -80,7 +80,8 @@ const auth = combineReducers({
 
 export default auth;
 
-export const getUser = (state) => state.authInfo.user;
+export const getUserName = (state) =>
+  state.authInfo.user_name ? state.authInfo.user_name : null;
 
 // export const getUserType = (state) => state.authInfo.user.userType;
 
@@ -90,6 +91,7 @@ export const getIsAuth = (state) => state.authInfo.isAuthenticated;
 
 export const getIsAdminUser = (state) => state.authInfo.isAdminUser;
 
-export const getUserType = (state) => state.authInfo.userType ? state.authInfo.userType : null;
+export const getUserType = (state) =>
+  state.authInfo.userType ? state.authInfo.userType : null;
 
 // export const getCreditCard = state => state.creditCard

@@ -47,7 +47,7 @@ const Newplaylist = ({
             </button>
           </div>
         </form>
-        {modSuccess ? <Redirect to="/comun-home/playlist" /> : null}
+        {modSuccess ? <Redirect to="/comun-homeOp" /> : null}
       </div>
     </div>
   );
@@ -101,6 +101,6 @@ export default reduxForm({
     reqSuccess: selectors.getReqSuccess(state),
     reqMsg: selectors.getReqMsg(state),
     modSuccess: selectors.getModSuccess(state),
-    loggeduser: selectors.getUser(state),
+    loggeduser: selectors.getUserName(state),
   }))(Newplaylist)
 );

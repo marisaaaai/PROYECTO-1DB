@@ -3,6 +3,7 @@ import { Provider } from "react-redux";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.css";
 import { configureStore } from "../../store";
+import login from "../Login/Login";
 import ComunHome from "../ComunHome/ComunHome";
 import ArtistaHome from "../ArtistaHome/ArtistaHome";
 import AdminHome from "../AdminHome/AdminHome";
@@ -25,6 +26,7 @@ import stats from "../AdminHome/Stats/stats";
 import NewPlaylist from "../ComunHome/Playlist/NewPlaylist/newPlaylist";
 import playlist from "../ComunHome/Playlist/playlist";
 import addSongs from "../ComunHome/Playlist/AddSongs/addSongs";
+import comunHomeOp from "../ComunHome/ComunHomeOp";
 const store = configureStore();
 
 function App() {
@@ -63,6 +65,8 @@ function App() {
         <Route path="/comun-home/new-playlist" component={NewPlaylist} />
         <Route path="/comun-home/playlist" component={playlist} />
         <Route path="/comun-home/add-songsPlaylist" component={addSongs} />
+        <Route path="/comun-homeOp" component={comunHomeOp} />
+        <Route path="/login" component={login} />
       </Router>
     </Provider>
   );

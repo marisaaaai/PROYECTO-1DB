@@ -5,12 +5,11 @@ Consultas a la base de datos
 
 
 */
-//const { v4: uuid } = require("uuid");
-//const dateFormat = require("dateformat");
+
 require("dotenv").config();
 
-const Cryptr = require("cryptr");
-cryptr = new Cryptr(process.env.CRYPTRKEY);
+// const Cryptr = require("cryptr");
+// cryptr = new Cryptr(process.env.CRYPTRKEY);
 
 const { Pool } = require("pg");
 
@@ -18,7 +17,7 @@ const config = {
   host: "localhost",
   user: "postgres",
   password: "Nico",
-  database: "pruebaa",
+  database: "estadist",
 };
 
 const pool = new Pool(config);
@@ -91,7 +90,7 @@ const getUserById = async (req, res) => {
                       res.json({
                         action: {
                           type: "REGISTER_SUCCESS",
-                          payload: { user: correo, userType: "admin" },
+                          payload: { user_name: correo, userType: "admin" },
                         },
                       });
                     } else {
@@ -122,7 +121,7 @@ const getUserById = async (req, res) => {
                 res.json({
                   action: {
                     type: "REGISTER_SUCCESS",
-                    payload: { user: correo, userType: "artista" },
+                    payload: { user_name: correo, userType: "artista" },
                   },
                 });
               } else {
@@ -153,7 +152,7 @@ const getUserById = async (req, res) => {
           res.json({
             action: {
               type: "REGISTER_SUCCESS",
-              payload: { user: correo, userType: "comun" },
+              payload: { user_name: correo, userType: "comun" },
             },
           });
         } else {
@@ -232,7 +231,10 @@ const createUser = async (req, res) => {
             res.json({
               action: {
                 type: "REGISTER_SUCCESS",
-                payload: { user: correo, msg: "Usuario anadido con exito" },
+                payload: {
+                  user_name: correo,
+                  msg: "Usuario anadido con exito",
+                },
               },
             });
           });
@@ -648,11 +650,11 @@ const search = async (req, res) => {
 };
 
 const addReproduction = async (req, res) => {
-  const { cancion_id, currentUser } = req.body;
+  const { trackId, currentUser } = req.body;
 
   await pool.query(
     "INSERT INTO reproducciones(cancion_id,usuario_id) VALUES($1, $2)",
-    [cancion_id, currentUser]
+    [trackId, currentUser]
   );
 
   res.json({ msg: "Cancion reproducida" });
@@ -661,46 +663,39 @@ const getStats = async (req, res) => {
   //Hace consultas de estadisticas
 
   const graph1 = await pool.query(
-    "SELECT nombre FROM album ORDER BY album_id DESC LIMIT 5;"
+    "SELECT nombre, album_id FROM album WHERE (SELECT DATE_PART('day', CURRENT_DATE::date) - DATE_PART('day', fechaAnad ::date)) <= 7;"
   );
-  // const graph2 = await pool.query(
-  //   "SELECT COUNT(genre.genreid), genre.name FROM genre INNER JOIN track ON genre.genreid = track.genreid GROUP BY genre.genreid ORDER BY COUNT(genre.genreid) DESC LIMIT 5;"
-  // );
-  // const graph3 = await pool.query(
-  //   "SELECT playlist.playlistid, playlist.name, SUM(track.milliseconds/1000) AS Count FROM playlist LEFT JOIN playlisttrack ON playlisttrack.playlistid = playlist.playlistid LEFT JOIN track ON track.trackid = playlisttrack.trackid WHERE track.milliseconds IS NOT NULL GROUP BY playlist.playlistid ORDER BY Count DESC;"
-  // );
-  // const graph4 = await pool.query(
-  //   "SELECT artist1.name, track1.name, (track1.milliseconds/1000) As Count FROM album album1 join artist artist1 on album1.artistid = artist1.artistid join track track1 on track1.albumid = album1.albumid  WHERE track1.mediatypeid = 2 OR track1.mediatypeid = 1 OR track1.mediatypeid = 4 OR track1.mediatypeid = 5 ORDER BY (track1.milliseconds) DESC LIMIT 5;"
-  // );
-  // const graph5 = await pool.query(
-  //   "SELECT employee1.email as name, COUNT (track1.employeeid) AS count FROM track track1 JOIN employee employee1 ON employee1.email = track1.employeeid GROUP BY employee1.email ORDER BY count DESC LIMIT 5;"
-  // );
-  // const graph6 = await pool.query(
-  //   "SELECT genre.name, SUM(track.milliseconds)/COUNT(*) as count FROM track INNER JOIN genre ON track.genreid = genre.genreid GROUP BY genre.genreid;"
-  // );
-  // const graph7 = await pool.query(
-  //   "SELECT playlist1.name, COUNT(artist1.artistid) FROM playlist playlist1 JOIN playlisttrack playlisttrack1 ON playlist1.playlistid = playlisttrack1.playlistid JOIN track track1 ON track1.trackid = playlisttrack1.trackid JOIN album album1 ON album1.albumid = track1.albumid JOIN artist artist1 ON artist1.artistid = album1.artistid GROUP BY playlist1.name ORDER BY COUNT(artist1.name) DESC;"
-  // );
-  // const graph8 = await pool.query(
-  //   "SELECT artist1.name, count(DISTINCT track1.genreid) as count from genre genre1 join track track1 on genre1.genreid = track1.genreid join album album1 on album1.albumid = track1.albumid join artist artist1 on artist1.artistid = album1.artistid group by artist1.name order by count(genre1.genreid) desc LIMIT 5;"
-  // );
+  const graph2 = await pool.query(
+    "SELECT artista.nombre, artista.artista_id FROM (SELECT artista_id FROM cancion INNER JOIN reproducciones ON cancion.cancion_id = reproducciones.cancion_id WHERE (SELECT DATE_PART('month', CURRENT_DATE::date) - DATE_PART('month', fechaRep ::date)) <= 3)as foo INNER JOIN artista ON artista.artista_id = foo.artista_id;"
+  );
+  const graph3 = await pool.query(
+    "SELECT COUNT(*) as cantidadSuscripciones FROM usuario WHERE (SELECT DATE_PART('month', CURRENT_DATE::date) - DATE_PART('month', fechaRegistro ::date)) <= 6 AND suscripcion=1;"
+  );
+  const graph4 = await pool.query(
+    "SELECT artista.artista_id, artista.nombre, CancionesArtista FROM (SELECT artista_id, COUNT(*) AS CancionesArtista FROM cancion GROUP BY artista_id ORDER BY CancionesArtista LIMIT 3) AS foo INNER JOIN artista ON foo.artista_id=artista.artista_id;"
+  );
+  const graph5 = await pool.query(
+    "SELECT cancion.genero, REPRODUCCIONES FROM (SELECT cancion_id, COUNT(*) as REPRODUCCIONES FROM reproducciones GROUP BY cancion_id LIMIT 3) as foo INNER JOIN cancion ON cancion.cancion_id=foo.cancion_id;"
+  );
+  const graph6 = await pool.query(
+    "SELECT usuario.correo, REPRODUCCIONES FROM (SELECT usuario_id, COUNT(*) as REPRODUCCIONES FROM reproducciones GROUP BY usuario_id LIMIT 3) as foo INNER JOIN usuario ON usuario.correo=foo.usuario_id;"
+  );
   res.json({
     action: {
       type: "STATS_LOADED",
       payload: {
         graph1: graph1.rows,
-        // graph2: graph2.rows,
-        // graph3: graph3.rows,
-        // graph4: graph4.rows,
-        // graph5: graph5.rows,
-        // graph6: graph6.rows,
-        // graph7: graph7.rows,
-        // graph8: graph8.rows,
+        graph2: graph2.rows,
+        graph3: graph3.rows,
+        graph4: graph4.rows,
+        graph5: graph5.rows,
+        graph6: graph6.rows,
       },
     },
   });
   res.status(200);
 };
+
 module.exports = {
   getUsers,
   getAlbums,

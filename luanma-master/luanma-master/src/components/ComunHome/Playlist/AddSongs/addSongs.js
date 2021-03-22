@@ -109,6 +109,6 @@ export default reduxForm({
     reqSuccess: selectors.getReqSuccess(state),
     reqMsg: selectors.getReqMsg(state),
     modSuccess: selectors.getModSuccess(state),
-    loggeduser: selectors.getUser(state),
+    loggeduser: selectors.getUserName(state),
   }))(Newplaylist)
 );

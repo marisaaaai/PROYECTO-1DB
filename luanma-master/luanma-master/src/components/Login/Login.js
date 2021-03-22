@@ -57,7 +57,7 @@ const Login = ({
           </div>
         </form>
         {isAuthenticated && userType === "comun" ? (
-          <Redirect to="/comun-home" />
+          <Redirect to="/comun-homeOp" />
         ) : isAuthenticated && userType === "admin" ? (
           <Redirect to="/admin-home" />
         ) : isAuthenticated ? (

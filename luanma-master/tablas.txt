@@ -1,29 +1,25 @@
-VREAR TABLAS
-
 CREATE TABLE usuario_artista(usuarioArtista_id VARCHAR(30), correo VARCHAR(50),contrasena VARCHAR(70), nombre VARCHAR(50),
 							PRIMARY KEY (usuarioArtista_id));
-CREATE TABLE artista (artista_id SERIAL, nombre VARCHAR(50), PRIMARY KEY(artista_id));
-
-CREATE TABLE album  (album_id SERIAL, nombre VARCHAR(50), artista_id SERIAL, PRIMARY KEY (album_id),
+CREATE TABLE artista (artista_id SERIAL, nombre VARCHAR(50), fechaAnad DATE DEFAULT CURRENT_DATE, PRIMARY KEY(artista_id));
+CREATE TABLE album  (album_id SERIAL, nombre VARCHAR(50), artista_id SERIAL, fechaAnad DATE DEFAULT CURRENT_DATE, PRIMARY KEY (album_id),
 					FOREIGN KEY (artista_id) REFERENCES artista(artista_id) ON DELETE CASCADE ON UPDATE CASCADE);
 --activada es 0 e inactivada 1
 CREATE TABLE cancion (cancion_id SERIAL, nombre VARCHAR(50), enlace VARCHAR(50),genero VARCHAR(50), artista_id SERIAL,
-					 album_id SERIAL, activada INT, PRIMARY KEY(cancion_id), FOREIGN KEY (artista_id) REFERENCES artista(artista_id) ON DELETE CASCADE ON UPDATE CASCADE,
+					 album_id SERIAL, activada INT, fechaAnad DATE DEFAULT CURRENT_DATE, PRIMARY KEY(cancion_id), FOREIGN KEY (artista_id) REFERENCES artista(artista_id) ON DELETE CASCADE ON UPDATE CASCADE,
 					 FOREIGN KEY (album_id) REFERENCES album(album_id) ON DELETE CASCADE ON UPDATE CASCADE);
-					 
-CREATE TABLE administrador (administrador_id SERIAL, correo VARCHAR(50), contrasena VARCHAR(50), PRIMARY KEY (administrador_id));
+CREATE TABLE administrador (administrador_id SERIAL, correo VARCHAR(50), contrasena VARCHAR(50), PRIMARY KEY (correo));
 
-CREATE TABLE usuario (usuario_id VARCHAR(50), correo VARCHAR(50), contrasena VARCHAR(50), nombreUsuario VARCHAR(50), suscripcion INT,
-					 PRIMARY KEY (usuario_id));
-CREATE TABLE reproducciones (cancion_id SERIAL, usuario_id VARCHAR(50), FOREIGN KEY (cancion_id) REFERENCES 
-							cancion(cancion_id), FOREIGN KEY (usuario_id) REFERENCES usuario(usuario_id) ON DELETE CASCADE ON UPDATE CASCADE);
+CREATE TABLE usuario (usuario_id VARCHAR(50), correo VARCHAR(50), contrasena VARCHAR(50), nombreUsuario VARCHAR(50), suscripcion INT, fechaRegistro DATE DEFAULT CURRENT_DATE,
+					 PRIMARY KEY (correo));
+CREATE TABLE reproducciones (cancion_id SERIAL, usuario_id VARCHAR(50), fechaRep DATE DEFAULT CURRENT_DATE, FOREIGN KEY (cancion_id) REFERENCES 
+							cancion(cancion_id), FOREIGN KEY (usuario_id) REFERENCES usuario(correo) ON DELETE CASCADE ON UPDATE CASCADE);
 
 CREATE TABLE playlist (playlist_id SERIAL, nombre VARCHAR(50), usuario_id VARCHAR(50), primary key (playlist_id), 
-					  FOREIGN KEY (usuario_id) REFERENCES usuario(usuario_id) ON DELETE CASCADE ON UPDATE CASCADE);
+					  FOREIGN KEY (usuario_id) REFERENCES usuario(correo) ON DELETE CASCADE ON UPDATE CASCADE);
 					  
 CREATE TABLE canciones_playlist(playlist_id SERIAL, cancion_id SERIAL, FOREIGN KEY (playlist_id) REFERENCES
 							   playlist(playlist_id) ON DELETE CASCADE ON UPDATE CASCADE, FOREIGN KEY (cancion_id) REFERENCES cancion(cancion_id) ON DELETE CASCADE ON UPDATE CASCADE);
-INSERTAR THE KILLERS / indie rock
+--INSERTAR THE KILLERS / indie rock
 
 INSERT INTO artista(nombre) VALUES ('The Killers');
 
@@ -59,7 +55,7 @@ VALUES ('When the Dreams Run Dry', 'https://www.youtube.com/watch?v=0fCzAzNq0e8'
 INSERT INTO cancion(nombre, enlace, genero,artista_id,album_id,activada) 
 VALUES ('Imploding the Mirage', 'https://www.youtube.com/watch?v=hrazTo8xVds', 'indie rock', 01,01,0);
 
-INSERTAR MARC ANTHONY / salsa
+--INSERTAR MARC ANTHONY / salsa
 INSERT INTO artista (nombre) VALUES ('Marc Anthony');
 INSERT INTO album (nombre, artista_id) VALUES ('3.0',02);
 
@@ -92,3 +88,33 @@ VALUES ('Cautivo de este Amor', 'https://www.youtube.com/watch?v=ARAi0XaC-lY', '
 
 INSERT INTO cancion (nombre, enlace,genero,artista_id, album_id,activada)
 VALUES ('Vivir mi Vida cover Khaled', 'https://www.youtube.com/watch?v=CXfeBvYLliw', 'salsa',02,02,0);
+
+-- usuarios
+INSERT INTO usuario_artista VALUES('artistaMarisa','artistamarisa@gmail.com','contrasena','Marisa');
+
+INSERT INTO administrador(correo, contrasena) VALUES ('adminmarisa@gmail.com', 'contrasena');
+
+INSERT INTO usuario VALUES ('marisamv', 'montoyamarisa98@gmail.com','Nico','Marisa',1);
+
+-- queries para reporteria
+
+--PRIMERA ESTADISTICA
+SELECT nombre, album_id FROM album WHERE (SELECT DATE_PART('day', CURRENT_DATE::date) - DATE_PART('day', fechaAnad ::date)) <= 7;
+
+--SEGUNDA
+SELECT artista.nombre, artista.artista_id FROM (SELECT artista_id FROM cancion INNER JOIN reproducciones ON cancion.cancion_id = reproducciones.cancion_id 
+								WHERE (SELECT DATE_PART('month', CURRENT_DATE::date) - DATE_PART('month', fechaRep ::date)) <= 3)as foo
+								INNER JOIN artista ON artista.artista_id = foo.artista_id;
+
+-- TERCERA
+SELECT COUNT(*) as cantidadSuscripciones FROM usuario WHERE (SELECT DATE_PART('month', CURRENT_DATE::date) - DATE_PART('month', fechaRegistro ::date)) <= 6 AND suscripcion=1;
+
+-- CUArta
+SELECT artista.artista_id, artista.nombre, CancionesArtista 
+FROM (SELECT artista_id, COUNT(*) AS CancionesArtista FROM cancion GROUP BY artista_id ORDER BY CancionesArtista LIMIT 3) AS foo INNER JOIN artista ON foo.artista_id=artista.artista_id;
+
+--QUINTA
+SELECT cancion.genero, REPRODUCCIONES FROM (SELECT cancion_id, COUNT(*) as REPRODUCCIONES FROM reproducciones GROUP BY cancion_id LIMIT 3) as foo INNER JOIN cancion ON cancion.cancion_id=foo.cancion_id;
+
+--SEXTA
+SELECT usuario.correo, REPRODUCCIONES FROM (SELECT usuario_id, COUNT(*) as REPRODUCCIONES FROM reproducciones GROUP BY usuario_id LIMIT 3) as foo INNER JOIN usuario ON usuario.correo=foo.usuario_id;

@@ -78,7 +78,7 @@ const Track = ({ track, myTrack, onPlay, currentUser }) => {
 
 export default connect(
   (state) => ({
-    currentUser: selectors.getUser(state),
+    currentUser: selectors.getUserName(state),
   }),
   (dispatch) => ({
     onPlay(trackId, currentUser) {

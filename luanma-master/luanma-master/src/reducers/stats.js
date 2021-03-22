@@ -15,7 +15,6 @@ const isLoading = (state = false, action) => {
       return state;
   }
 };
-
 const statsInfo = (state = {}, action) => {
   switch (action.type) {
     case types.STATS_LOADED:
@@ -29,10 +28,88 @@ const statsInfo = (state = {}, action) => {
       return state;
   }
 };
+const graph1 = (state = {}, action) => {
+  switch (action.type) {
+    case types.STATS_LOADED:
+      return {
+        ...action.payload.graph1,
+      };
+    case types.LOGOUT_SUCCESS:
+      return {};
+    default:
+      return state;
+  }
+};
+const graph2 = (state = {}, action) => {
+  switch (action.type) {
+    case types.STATS_LOADED:
+      return {
+        ...action.payload.graph1,
+      };
+    case types.LOGOUT_SUCCESS:
+      return {};
+    default:
+      return state;
+  }
+};
+const graph3 = (state = {}, action) => {
+  switch (action.type) {
+    case types.STATS_LOADED:
+      return {
+        ...action.payload.graph1,
+      };
+    case types.LOGOUT_SUCCESS:
+      return {};
+    default:
+      return state;
+  }
+};
+const graph4 = (state = {}, action) => {
+  switch (action.type) {
+    case types.STATS_LOADED:
+      return {
+        ...action.payload.graph1,
+      };
+    case types.LOGOUT_SUCCESS:
+      return {};
+    default:
+      return state;
+  }
+};
+const graph5 = (state = {}, action) => {
+  switch (action.type) {
+    case types.STATS_LOADED:
+      return {
+        ...action.payload.graph1,
+      };
+    case types.LOGOUT_SUCCESS:
+      return {};
+    default:
+      return state;
+  }
+};
+const graph6 = (state = {}, action) => {
+  switch (action.type) {
+    case types.STATS_LOADED:
+      return {
+        ...action.payload.graph1,
+      };
+    case types.LOGOUT_SUCCESS:
+      return {};
+    default:
+      return state;
+  }
+};
 
 const stats = combineReducers({
   isLoading,
   statsInfo,
+  graph1,
+  graph2,
+  graph3,
+  graph4,
+  graph5,
+  graph6,
 });
 
 export default stats;
@@ -40,3 +117,15 @@ export default stats;
 export const getIsLoading = (state) => state.isLoading;
 
 export const getStats = (state, graphNum) => state.statsInfo[graphNum];
+
+export const getGraph1 = (state) => state.graph1;
+
+export const getGraph2 = (state) => state.graph2;
+
+export const getGraph3 = (state) => state.graph3;
+
+export const getGraph4 = (state) => state.graph4;
+
+export const getGraph5 = (state) => state.graph5;
+
+export const getGraph6 = (state) => state.graph6;

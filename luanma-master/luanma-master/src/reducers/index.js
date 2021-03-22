@@ -16,12 +16,13 @@ const reducer = combineReducers({
   albums,
   req,
   artists,
+  stats,
   form: formReducer,
 });
 
 export default reducer;
 
-export const getUser = (state) => authSelectors.getUser(state.auth);
+export const getUserName = (state) => authSelectors.getUserName(state.auth);
 
 export const getAuthMsg = (state) => authSelectors.getMsg(state.auth);
 
@@ -67,3 +68,10 @@ export const getLoadingStats = (state) =>
 
 export const getStats = (state, graphNum) =>
   statsSelectors.getStats(state.stats, graphNum);
+
+export const getGraph1 = (state) => statsSelectors.getGraph1(state.stats);
+export const getGraph2 = (state) => statsSelectors.getGraph2(state.stats);
+export const getGraph3 = (state) => statsSelectors.getGraph3(state.stats);
+export const getGraph4 = (state) => statsSelectors.getGraph4(state.stats);
+export const getGraph5 = (state) => statsSelectors.getGraph5(state.stats);
+export const getGraph6 = (state) => statsSelectors.getGraph6(state.stats);
