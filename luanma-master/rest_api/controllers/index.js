@@ -419,15 +419,15 @@ const deleteTrack = async (req, res) => {
           payload: { msg: "Cancion Eliminada" },
         },
       });
-    })
-    .catch(() => {
-      res.json({
-        action: {
-          type: "REQUEST_FAIL",
-          payload: { msg: "Problemas con el servidor" },
-        },
-      });
     });
+  console.log().catch((e) => {
+    res.json({
+      action: {
+        type: "REQUEST_FAIL",
+        payload: { msg: "Problemas con el servidor" },
+      },
+    });
+  });
 };
 
 const deleteArtist = async (req, res) => {
@@ -663,13 +663,13 @@ const getStats = async (req, res) => {
   //Hace consultas de estadisticas
 
   const graph1 = await pool.query(
-    "SELECT nombre, album_id FROM album WHERE (SELECT DATE_PART('day', CURRENT_DATE::date) - DATE_PART('day', fechaAnad ::date)) <= 7;"
+    "SELECT nombre, album_id FROM album WHERE (SELECT DATE_PART('day', CURRENT_DATE::date) - DATE_PART('day', fechaAnad ::date)) <= 7 AND (SELECT DATE_PART('year', CURRENT_DATE::date) - DATE_PART('year', fechaAnad ::date)) = 0 AND (SELECT DATE_PART('month', CURRENT_DATE::date) - DATE_PART('month', fechaAnad ::date)) = 0;"
   );
   const graph2 = await pool.query(
-    "SELECT artista.nombre, artista.artista_id FROM (SELECT artista_id FROM cancion INNER JOIN reproducciones ON cancion.cancion_id = reproducciones.cancion_id WHERE (SELECT DATE_PART('month', CURRENT_DATE::date) - DATE_PART('month', fechaRep ::date)) <= 3)as foo INNER JOIN artista ON artista.artista_id = foo.artista_id;"
+    "SELECT artista.nombre, artista.artista_id FROM (SELECT DISTINCT artista_id FROM cancion INNER JOIN reproducciones ON cancion.cancion_id = reproducciones.cancion_id WHERE (SELECT DATE_PART('month', CURRENT_DATE::date) - DATE_PART('month', fechaRep ::date)) <= 3 AND (SELECT DATE_PART('year', CURRENT_DATE::date) - DATE_PART('year', fechaRep ::date)) = 0)as foo INNER JOIN artista ON artista.artista_id = foo.artista_id;"
   );
   const graph3 = await pool.query(
-    "SELECT COUNT(*) as cantidadSuscripciones FROM usuario WHERE (SELECT DATE_PART('month', CURRENT_DATE::date) - DATE_PART('month', fechaRegistro ::date)) <= 6 AND suscripcion=1;"
+    "SELECT COUNT(*) as cantidadSuscripciones FROM usuario WHERE (SELECT DATE_PART('month', CURRENT_DATE::date) - DATE_PART('month', fechaRegistro ::date)) <= 6 AND (SELECT DATE_PART('year', CURRENT_DATE::date) - DATE_PART('year', fechaRegistro ::date)) <= 0 AND suscripcion=1;"
   );
   const graph4 = await pool.query(
     "SELECT artista.artista_id, artista.nombre, CancionesArtista FROM (SELECT artista_id, COUNT(*) AS CancionesArtista FROM cancion GROUP BY artista_id ORDER BY CancionesArtista LIMIT 3) AS foo INNER JOIN artista ON foo.artista_id=artista.artista_id;"

@@ -1,0 +1,150 @@
+
+--INSERTAR Michael Jackson / pop
+INSERT INTO artista(nombre) VALUES ('Michael Jackson');
+
+INSERT INTO album (nombre, artista_id) VALUES ('Thriller', );
+INSERT INTO cancion(nombre, enlace, genero,artista_id,album_id, activada) 
+VALUES ('Wanna Be Startin Somethin', 'https://www.youtube.com/watch?v=4Uj3zitETs4', 'pop', 05, 08,0);
+
+INSERT INTO cancion(nombre, enlace, genero,artista_id,album_id,activada) 
+VALUES ('Baby Be Mine', 'https://www.youtube.com/watch?v=hG9OzYVSg3c', 'pop', 05, 08,0);
+
+INSERT INTO cancion(nombre, enlace, genero,artista_id,album_id,activada) 
+VALUES ('The Girl Is Mine ft. Paul McCartney', 'https://www.youtube.com/watch?v=rHp0s2wKajw', 'pop', 05, 08,0);
+
+INSERT INTO cancion(nombre, enlace, genero,artista_id,album_id,activada) 
+VALUES ('Thriller', 'https://www.youtube.com/watch?v=Z85lxckrtzg', 'pop', 05, 08,0);
+
+INSERT INTO cancion(nombre, enlace, genero,artista_id,album_id,activada) 
+VALUES ('Beat It', 'https://www.youtube.com/watch?v=oRdxUFDoQe0', 'pop', 05, 08,0);
+
+INSERT INTO cancion(nombre, enlace, genero,artista_id,album_id,activada) 
+VALUES ('Billie Jean', 'https://www.youtube.com/watch?v=Zi_XLOBDo_Y', 'pop', 05, 08,0);
+
+INSERT INTO cancion(nombre, enlace, genero,artista_id,album_id,activada) 
+VALUES ('Human Nature', 'https://www.youtube.com/watch?v=ElN_4vUvTPs', 'pop', 05, 08,0);
+
+INSERT INTO cancion(nombre, enlace, genero,artista_id,album_id,activada) 
+VALUES ('P.Y.T. (Pretty Young Thing)', 'https://www.youtube.com/watch?v=1ZZQuj6htF4', 'pop', 05, 08,0);
+
+INSERT INTO cancion(nombre, enlace, genero,artista_id,album_id,activada) 
+VALUES ('The Lady in My Life', 'https://www.youtube.com/watch?v=cJLH5yXoqi8', 'pop', 05, 08,0);
+
+--INSERTAR Romeo Santos / bachata
+
+IINSERT INTO artista(nombre) VALUES ('Romeo Santos');
+
+INSERT INTO album (nombre, artista_id) VALUES ('Formula, Vol.2', );
+
+INSERT INTO cancion(nombre, enlace, genero,artista_id,album_id, activada) 
+VALUES ('Inocente', 'https://www.youtube.com/watch?v=mLwwyCKZZdk', 'bachata', , ,0);
+
+INSERT INTO cancion(nombre, enlace, genero,artista_id,album_id,activada) 
+VALUES ('Necio', 'https://www.youtube.com/watch?v=DXiXPhvYuNU', 'bachata', , ,0);
+
+INSERT INTO cancion(nombre, enlace, genero,artista_id,album_id,activada) 
+VALUES ('Amigo', 'https://www.youtube.com/watch?v=2p_eRTj5s5M', 'bachata', , ,0);
+
+INSERT INTO cancion(nombre, enlace, genero,artista_id,album_id,activada) 
+VALUES ('Cancioncitas de Amor', 'https://www.youtube.com/watch?v=jk4HYngf65w', 'bachata', , ,0);
+
+INSERT INTO cancion(nombre, enlace, genero,artista_id,album_id,activada) 
+VALUES ('Eres Mia', 'https://www.youtube.com/watch?v=8iPcqtHoR3U', 'bachata', , ,0);
+
+INSERT INTO cancion(nombre, enlace, genero,artista_id,album_id,activada) 
+VALUES ('Odio', 'https://www.youtube.com/watch?v=W8r-eIhp4j0', 'bachata', , ,0);
+
+INSERT INTO cancion(nombre, enlace, genero,artista_id,album_id,activada) 
+VALUES ('Hilito', 'https://www.youtube.com/watch?v=4eCL0l9iD5A', 'bachata', , ,0);
+
+INSERT INTO cancion(nombre, enlace, genero,artista_id,album_id,activada) 
+VALUES ('Yo Tambien', 'https://www.youtube.com/watch?v=QBaIMZ8QjcU', 'bachata', , ,0);
+
+INSERT INTO cancion(nombre, enlace, genero,artista_id,album_id,activada) 
+VALUES ('Fui a Jamaica', 'https://www.youtube.com/watch?v=r__q4ExMzRk', 'bachata', , ,0);
+
+INSERT INTO cancion(nombre, enlace, genero,artista_id,album_id,activada) 
+VALUES ('Odio', 'https://www.youtube.com/watch?v=W8r-eIhp4j0', 'bachata', , ,0);
+
+INSERT INTO cancion(nombre, enlace, genero,artista_id,album_id,activada) 
+VALUES ('Hilito', 'https://www.youtube.com/watch?v=4eCL0l9iD5A', 'bachata', , ,0);
+
+INSERT INTO cancion(nombre, enlace, genero,artista_id,album_id,activada) 
+VALUES ('Yo Tambien', 'https://www.youtube.com/watch?v=QBaIMZ8QjcU', 'bachata', , ,0);
+
+INSERT INTO cancion(nombre, enlace, genero,artista_id,album_id,activada) 
+VALUES ('Fui a Jamaica', 'https://www.youtube.com/watch?v=r__q4ExMzRk', 'bachata', , ,0);
+
+INSERT INTO cancion(nombre, enlace, genero,artista_id,album_id,activada) 
+VALUES ('No Tiene La Culpa', 'https://www.youtube.com/watch?v=0VNcDexqPoY', 'bachata', , ,0);
+
+INSERT INTO cancion(nombre, enlace, genero,artista_id,album_id,activada) 
+VALUES ('Animales', 'https://www.youtube.com/watch?v=5sPnEFaNhfQ', 'bachata', , ,0);
+
+INSERT INTO cancion(nombre, enlace, genero,artista_id,album_id,activada) 
+VALUES ('Propuesta Indecente', 'https://www.youtube.com/watch?v=QFs3PIZb3js', 'bachata', , ,0);
+
+INSERT INTO cancion(nombre, enlace, genero,artista_id,album_id,activada) 
+VALUES ('Obra Maestra', 'https://www.youtube.com/watch?v=4tq0vsAQLz4', 'bachata', , ,0);
+
+INSERT INTO cancion(nombre, enlace, genero,artista_id,album_id,activada) 
+VALUES ('7 Dias', 'https://www.youtube.com/watch?v=MkcXU_kn8dw', 'bachata', , ,0);
+
+INSERT INTO cancion(nombre, enlace, genero,artista_id,album_id,activada) 
+VALUES ('Si Yo Muero', 'https://www.youtube.com/watch?v=80aLJ8uAEMg', 'bachata', , ,0);
+
+INSERT INTO cancion(nombre, enlace, genero,artista_id,album_id,activada) 
+VALUES ('Trust', 'https://www.youtube.com/watch?v=1C2bDyfTVXE', 'bachata', , ,0);
+
+INSERT INTO cancion(nombre, enlace, genero,artista_id,album_id,activada) 
+VALUES ('Mami', 'https://www.youtube.com/watch?v=s4bUqUMT6-g', 'bachata', , ,0);
+
+
+
+--INSERTAR Black Eyed Peas / pop
+
+IINSERT INTO artista(nombre) VALUES ('Black Eyed Peas');
+
+INSERT INTO album (nombre, artista_id) VALUES ('The E.N.D.', );
+INSERT INTO cancion(nombre, enlace, genero,artista_id,album_id, activada) 
+VALUES ('Boom Boom Pow', 'https://www.youtube.com/watch?v=4m48GqaOz90', 'pop', 07, 10,0);
+
+INSERT INTO cancion(nombre, enlace, genero,artista_id,album_id,activada) 
+VALUES ('Rock That Body', 'https://www.youtube.com/watch?v=nmnjL26OBcY', 'pop', 07, 10,0);
+
+INSERT INTO cancion(nombre, enlace, genero,artista_id,album_id,activada) 
+VALUES ('Imma Be', 'https://www.youtube.com/watch?v=kdAj-dBNCi4', 'pop', 07, 10,0);
+
+INSERT INTO cancion(nombre, enlace, genero,artista_id,album_id,activada) 
+VALUES ('I Gotta Feeling', 'https://www.youtube.com/watch?v=uSD4vsh1zDA', 'pop', 07, 10,0);
+
+INSERT INTO cancion(nombre, enlace, genero,artista_id,album_id,activada) 
+VALUES ('Alive', 'https://www.youtube.com/watch?v=j3i8nU3Q25Q', 'pop',07, 10,0);
+
+INSERT INTO cancion(nombre, enlace, genero,artista_id,album_id,activada) 
+VALUES ('Missing You', 'https://www.youtube.com/watch?v=YB8H3t4s_VY', 'pop',07, 10,0);
+
+INSERT INTO cancion(nombre, enlace, genero,artista_id,album_id,activada) 
+VALUES ('Ring A Ling', 'https://www.youtube.com/watch?v=RNUDh22yVNU', 'pop',07, 10,0);
+
+INSERT INTO cancion(nombre, enlace, genero,artista_id,album_id,activada) 
+VALUES ('Party All The Time', 'https://www.youtube.com/watch?v=i1GPzlu61W0', 'pop',07, 10,0);
+
+INSERT INTO cancion(nombre, enlace, genero,artista_id,album_id,activada) 
+VALUES ('Out Of My Head', 'https://www.youtube.com/watch?v=p-KyBm9d3yg', 'pop',07, 10,0);
+
+INSERT INTO cancion(nombre, enlace, genero,artista_id,album_id,activada) 
+VALUES ('Electric City', 'https://www.youtube.com/watch?v=3AxJ6uGOi_Y', 'pop',07, 10,0);
+
+INSERT INTO cancion(nombre, enlace, genero,artista_id,album_id,activada) 
+VALUES ('Showdown', 'https://www.youtube.com/watch?v=aF3AlxwnktM', 'pop',07, 10,0);
+
+INSERT INTO cancion(nombre, enlace, genero,artista_id,album_id,activada) 
+VALUES ('Now Generation', 'https://www.youtube.com/watch?v=wlKlhSw4xgI', 'pop',07, 10,0);
+
+INSERT INTO cancion(nombre, enlace, genero,artista_id,album_id,activada) 
+VALUES ('One Tribe', 'https://www.youtube.com/watch?v=X5E_yFyGDjM', 'pop',07, 10,0);
+
+INSERT INTO cancion(nombre, enlace, genero,artista_id,album_id,activada) 
+VALUES ('Rockin To The Beat', 'https://www.youtube.com/watch?v=m28lMimMCn0', 'pop',07, 10,0);
+

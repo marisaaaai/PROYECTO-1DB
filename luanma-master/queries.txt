@@ -1,0 +1,25 @@
+INSERT INTO album (nombre, artista_id) VALUES ('Hot Fuss',01);
+
+INSERT INTO cancion(nombre, enlace, genero,artista_id,album_id, activada) 
+VALUES ('Jenny Was A Friend Of Mine', 'https://www.youtube.com/watch?v=om_18WhUddY', 'indie rock', 01,01,0);
+INSERT INTO cancion(nombre, enlace, genero,artista_id,album_id, activada) 
+VALUES ('Mr. Brightside', 'https://www.youtube.com/watch?v=gGdGFtwCNBE', 'indie rock', 01,01,0);
+
+INSERT INTO cancion(nombre, enlace, genero,artista_id,album_id, activada) 
+VALUES ('Smile Like You Mean It', 'https://www.youtube.com/watch?v=ZAErD8xzjCM', 'indie rock', 01,01,0);
+INSERT INTO cancion(nombre, enlace, genero,artista_id,album_id, activada) 
+VALUES ('Somebody Told Me', 'https://www.youtube.com/watch?v=Y5fBdpreJiU', 'indie rock', 01,01,0);
+INSERT INTO cancion(nombre, enlace, genero,artista_id,album_id, activada) 
+VALUES ('All These Things Ive Done', 'https://www.youtube.com/watch?v=sZTpLvsYYHw', 'indie rock', 01,01,0);
+INSERT INTO cancion(nombre, enlace, genero,artista_id,album_id, activada) 
+VALUES ('Andy Youre a Star', 'https://www.youtube.com/watch?v=yQtXxgAAXEk', 'indie rock', 01,01,0);
+INSERT INTO cancion(nombre, enlace, genero,artista_id,album_id, activada) 
+VALUES ('On Top', 'https://www.youtube.com/watch?v=8UYcF4IPJqA', 'indie rock', 01,01,0);
+INSERT INTO cancion(nombre, enlace, genero,artista_id,album_id, activada) 
+VALUES ('Glamorous Indie Rock & Roll', 'https://www.youtube.com/watch?v=ELB-J6q-Whk', 'indie rock', 01,01,0);
+INSERT INTO cancion(nombre, enlace, genero,artista_id,album_id, activada) 
+VALUES ('Believe Me Natalie', 'https://www.youtube.com/watch?v=KX2oiHE-usQ', 'indie rock', 01,01,0);
+INSERT INTO cancion(nombre, enlace, genero,artista_id,album_id, activada) 
+VALUES ('Midnight Show', 'https://www.youtube.com/watch?v=LYsTFZnj4jw', 'indie rock', 01,01,0);
+INSERT INTO cancion(nombre, enlace, genero,artista_id,album_id, activada) 
+VALUES ('Everything Will Be Alright', 'https://www.youtube.com/watch?v=a7jdgcJsYVg', 'indie rock', 01,01,0);

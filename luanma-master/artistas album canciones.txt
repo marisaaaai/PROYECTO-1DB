@@ -1,0 +1,49 @@
+-- insertar coldplay 
+
+INSERT INTO artista(nombre) VALUES ('Coldplay');
+INSERT INTO album (nombre, artista_id) VALUES ('Ghost stories',);
+
+INSERT INTO cancion (nombre, enlace,genero,artista_id, album_id,activada) VALUES ('Anothers arms', 'https://www.youtube.com/watch?v=y7Ob2ltW_wM', 'britpop','espacioartista','espacioalbum',0);
+INSERT INTO cancion (nombre, enlace,genero,artista_id, album_id,activada) VALUES ('True love', 'https://www.youtube.com/watch?v=Wpl_6jotaHA', 'britpop','espacioartista','espacioalbum',0);
+INSERT INTO cancion (nombre, enlace,genero,artista_id, album_id,activada) VALUES ('Always in my head', 'https://www.youtube.com/watch?v=CrA-cBbQLi8', 'britpop','espacioartista','espacioalbum',0);
+INSERT INTO cancion (nombre, enlace,genero,artista_id, album_id,activada) VALUES ('O', 'https://www.youtube.com/watch?v=Ap-HeMIKi-c', 'britpop','espacioartista','espacioalbum',0);
+INSERT INTO cancion (nombre, enlace,genero,artista_id, album_id,activada) VALUES ('Ink', 'https://www.youtube.com/watch?v=gKM15TaKLUI', 'britpop','espacioartista','espacioalbum',0);
+INSERT INTO cancion (nombre, enlace,genero,artista_id, album_id,activada) VALUES ('midnight', 'https://www.youtube.com/watch?v=BQeMxWjpr-Y', 'britpop','espacioartista','espacioalbum',0);
+INSERT INTO cancion (nombre, enlace,genero,artista_id, album_id,activada) VALUES ('oceans', 'https://www.youtube.com/watch?v=BvsChJvE86M', 'britpop','espacioartista','espacioalbum',0);
+INSERT INTO cancion (nombre, enlace,genero,artista_id, album_id,activada) VALUES ('a sky full of stars', 'https://www.youtube.com/watch?v=VPRjCeoBqrI', 'britpop','espacioartista','espacioalbum',0);
+
+-- insertar Rammstein
+INSERT INTO artista(nombre) VALUES ('Rammstein');
+INSERT INTO album (nombre, artista_id) VALUES ('Rammstein',);
+
+INSERT INTO cancion (nombre, enlace,genero,artista_id, album_id,activada) VALUES ('DEUTSCHLAND', 'https://www.youtube.com/watch?v=NeQM1c-XCDc', 'metal','espacioartista','espacioalbum',0);
+INSERT INTO cancion (nombre, enlace,genero,artista_id, album_id,activada) VALUES ('RADIO', 'https://www.youtube.com/watch?v=z0NfI2NeDHI', 'metal','espacioartista','espacioalbum',0);
+INSERT INTO cancion (nombre, enlace,genero,artista_id, album_id,activada) VALUES ('AUSLANDER', 'https://www.youtube.com/watch?v=pat2c33sbog', 'metal','espacioartista','espacioalbum',0);
+INSERT INTO cancion (nombre, enlace,genero,artista_id, album_id,activada) VALUES ('ZEIG DICH', 'https://www.youtube.com/watch?v=atrEktiB8BI', 'metal','espacioartista','espacioalbum',0);
+INSERT INTO cancion (nombre, enlace,genero,artista_id, album_id,activada) VALUES ('DIAMANT', 'https://www.youtube.com/watch?v=aMasRegEUjc', 'metal','espacioartista','espacioalbum',0);
+INSERT INTO cancion (nombre, enlace,genero,artista_id, album_id,activada) VALUES ('WEIT WEG', 'https://www.youtube.com/watch?v=Oo7lifoh8Q4', 'metal','espacioartista','espacioalbum',0);
+
+--insertar Placebo
+INSERT INTO artista(nombre) VALUES ('Placebo');
+INSERT INTO album (nombre, artista_id) VALUES ('Loud like love',);
+
+INSERT INTO cancion (nombre, enlace,genero,artista_id, album_id,activada) VALUES ('Exit wounds', 'https://www.youtube.com/watch?v=AMYvSE3MmPM', 'rock alternativo','espacioartista','espacioalbum',0);
+INSERT INTO cancion (nombre, enlace,genero,artista_id, album_id,activada) VALUES ('A million little pieces', 'https://www.youtube.com/watch?v=U0YP9aJ_1TQ', 'rock alternativo','espacioartista','espacioalbum',0);
+INSERT INTO cancion (nombre, enlace,genero,artista_id, album_id,activada) VALUES ('Hold on to me', 'https://www.youtube.com/watch?v=p4hytzYQ3ik', 'rock alternativo','espacioartista','espacioalbum',0);
+INSERT INTO cancion (nombre, enlace,genero,artista_id, album_id,activada) VALUES ('begin the end', 'https://www.youtube.com/watch?v=PyQ2Q8DPtxI', 'rock alternativo','espacioartista','espacioalbum',0);
+INSERT INTO cancion (nombre, enlace,genero,artista_id, album_id,activada) VALUES ('Bosco', 'https://www.youtube.com/watch?v=NzpYuwvX_8Y', 'rock alternativo','espacioartista','espacioalbum',0);
+INSERT INTO cancion (nombre, enlace,genero,artista_id, album_id,activada) VALUES ('loud like love', 'https://www.youtube.com/watch?v=pi_AJxsdOKo', 'rock alternativo','espacioartista','espacioalbum',0);
+
+--insertar Epica
+INSERT INTO artista(nombre) VALUES ('Epica');
+INSERT INTO album (nombre, artista_id) VALUES ('Design your universe',);
+
+INSERT INTO cancion (nombre, enlace,genero,artista_id, album_id,activada) VALUES ('Resign to surrender', 'https://www.youtube.com/watch?v=NT_hy4KohfE', 'metal sinfonico','espacioartista','espacioalbum',0);
+INSERT INTO cancion (nombre, enlace,genero,artista_id, album_id,activada) VALUES ('Design your universe', 'https://www.youtube.com/watch?v=JR6aKhnAcFA', 'metal sinfonico','espacioartista','espacioalbum',0);
+INSERT INTO cancion (nombre, enlace,genero,artista_id, album_id,activada) VALUES ('unleashed', 'https://www.youtube.com/watch?v=dh56yThhJTo', 'metal sinfonico','espacioartista','espacioalbum',0);
+INSERT INTO cancion (nombre, enlace,genero,artista_id, album_id,activada) VALUES ('Our destiny', 'https://www.youtube.com/watch?v=FuP_hNi-UPY', 'metal sinfonico','espacioartista','espacioalbum',0);
+INSERT INTO cancion (nombre, enlace,genero,artista_id, album_id,activada) VALUES ('Tides of time', 'https://www.youtube.com/watch?v=eALDD5XaQuw', 'metal sinfonico','espacioartista','espacioalbum',0);
+INSERT INTO cancion (nombre, enlace,genero,artista_id, album_id,activada) VALUES ('Burn to a cinder', 'https://www.youtube.com/watch?v=wYBSw2fznbs', 'metal sinfonico','espacioartista','espacioalbum',0);
+
+
+
