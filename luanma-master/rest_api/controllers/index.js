@@ -17,7 +17,7 @@ const config = {
   host: "localhost",
   user: "postgres",
   password: "Nico",
-  database: "estadist",
+  database: "proyecto1DB",
 };
 
 const pool = new Pool(config);
@@ -672,10 +672,10 @@ const getStats = async (req, res) => {
     "SELECT COUNT(*) as cantidadSuscripciones FROM usuario WHERE (SELECT DATE_PART('month', CURRENT_DATE::date) - DATE_PART('month', fechaRegistro ::date)) <= 6 AND (SELECT DATE_PART('year', CURRENT_DATE::date) - DATE_PART('year', fechaRegistro ::date)) <= 0 AND suscripcion=1;"
   );
   const graph4 = await pool.query(
-    "SELECT artista.artista_id, artista.nombre, CancionesArtista FROM (SELECT artista_id, COUNT(*) AS CancionesArtista FROM cancion GROUP BY artista_id ORDER BY CancionesArtista LIMIT 3) AS foo INNER JOIN artista ON foo.artista_id=artista.artista_id;"
+    "SELECT artista.artista_id, artista.nombre, CancionesArtista FROM (SELECT artista_id, COUNT(*) AS CancionesArtista FROM cancion GROUP BY artista_id ORDER BY CancionesArtista DESC LIMIT 3) AS foo INNER JOIN artista ON foo.artista_id=artista.artista_id;"
   );
   const graph5 = await pool.query(
-    "SELECT cancion.genero, REPRODUCCIONES FROM (SELECT cancion_id, COUNT(*) as REPRODUCCIONES FROM reproducciones GROUP BY cancion_id LIMIT 3) as foo INNER JOIN cancion ON cancion.cancion_id=foo.cancion_id;"
+    "SELECT DISTINCT cancion.genero, COUNT (*) AS REPRODUCCIONES FROM (SELECT cancion_id FROM reproducciones) as foo INNER JOIN cancion ON cancion.cancion_id=foo.cancion_id GROUP BY cancion.genero ORDER BY REPRODUCCIONES DESC LIMIT 3;"
   );
   const graph6 = await pool.query(
     "SELECT usuario.correo, REPRODUCCIONES FROM (SELECT usuario_id, COUNT(*) as REPRODUCCIONES FROM reproducciones GROUP BY usuario_id LIMIT 3) as foo INNER JOIN usuario ON usuario.correo=foo.usuario_id;"

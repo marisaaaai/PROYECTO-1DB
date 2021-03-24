@@ -1,0 +1,24 @@
+.stats-container {
+  background-color: #ec486480;
+  margin: 2rem;
+  border-radius: 2rem;
+  color: white;
+  padding-bottom: 2rem;
+  padding-top: 1rem;
+}
+
+.stats_g1 {
+  display: flex;
+  flex-direction: row;
+  margin-left: 2rem;
+}
+
+.album_title {
+  display: flex;
+  align-items: center;
+  margin-right: 2rem;
+}
+
+.sub-title {
+  margin-left: 2rem;
+}

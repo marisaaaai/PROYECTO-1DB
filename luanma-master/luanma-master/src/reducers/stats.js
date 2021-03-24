@@ -44,7 +44,7 @@ const graph2 = (state = {}, action) => {
   switch (action.type) {
     case types.STATS_LOADED:
       return {
-        ...action.payload.graph1,
+        ...action.payload.graph2,
       };
     case types.LOGOUT_SUCCESS:
       return {};
@@ -56,7 +56,7 @@ const graph3 = (state = {}, action) => {
   switch (action.type) {
     case types.STATS_LOADED:
       return {
-        ...action.payload.graph1,
+        ...action.payload.graph3,
       };
     case types.LOGOUT_SUCCESS:
       return {};
@@ -68,7 +68,7 @@ const graph4 = (state = {}, action) => {
   switch (action.type) {
     case types.STATS_LOADED:
       return {
-        ...action.payload.graph1,
+        ...action.payload.graph4,
       };
     case types.LOGOUT_SUCCESS:
       return {};
@@ -80,7 +80,7 @@ const graph5 = (state = {}, action) => {
   switch (action.type) {
     case types.STATS_LOADED:
       return {
-        ...action.payload.graph1,
+        ...action.payload.graph5,
       };
     case types.LOGOUT_SUCCESS:
       return {};
@@ -92,7 +92,7 @@ const graph6 = (state = {}, action) => {
   switch (action.type) {
     case types.STATS_LOADED:
       return {
-        ...action.payload.graph1,
+        ...action.payload.graph6,
       };
     case types.LOGOUT_SUCCESS:
       return {};

@@ -144,7 +144,7 @@ SELECT artista.artista_id, artista.nombre, CancionesArtista
 FROM (SELECT artista_id, COUNT(*) AS CancionesArtista FROM cancion GROUP BY artista_id ORDER BY CancionesArtista LIMIT 3) AS foo INNER JOIN artista ON foo.artista_id=artista.artista_id;
 
 --QUINTA
-SELECT cancion.genero, REPRODUCCIONES FROM (SELECT cancion_id, COUNT(*) as REPRODUCCIONES FROM reproducciones GROUP BY cancion_id LIMIT 3) as foo INNER JOIN cancion ON cancion.cancion_id=foo.cancion_id;
+SELECT DISTINCT cancion.genero, COUNT (*) AS REPRODUCCIONES FROM (SELECT cancion_id FROM reproducciones) as foo INNER JOIN cancion ON cancion.cancion_id=foo.cancion_id GROUP BY cancion.genero ORDER BY REPRODUCCIONES DESC LIMIT 3;
 
 --SEXTA
 SELECT usuario.correo, REPRODUCCIONES FROM (SELECT usuario_id, COUNT(*) as REPRODUCCIONES FROM reproducciones GROUP BY usuario_id LIMIT 3) as foo INNER JOIN usuario ON usuario.correo=foo.usuario_id;

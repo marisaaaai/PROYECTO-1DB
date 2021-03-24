@@ -1,21 +1,22 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./styles.css";
-import * as actions from "../../actions/req";
+import * as actions from "../../actions/stats";
 import { connect } from "react-redux";
+import makeRequest from "../../requests/requests";
 
 const AdminHome = ({ onClick }) => {
   return (
     <div className="mods-wrapper">
       <h2>Funcionalidades</h2>
-      <Link to="/admin-home/mod" className="options" onClick={onClick}>
+      <Link to="/admin-home/mod" className="options">
         <div className="mod-wrapper">
           <h4>Modificaciones</h4>
         </div>
       </Link>
       <Link to="/admin-home/stats" className="options" onClick={onClick}>
         <div className="mod-wrapper">
-          <h4>Estadisticas</h4>
+          <h4>Reportes</h4>
         </div>
       </Link>
     </div>
@@ -24,6 +25,13 @@ const AdminHome = ({ onClick }) => {
 
 export default connect(undefined, (dispatch) => ({
   onClick() {
-    dispatch(actions.remReqInfo());
+    const requestInfo = {
+      uri: `http://localhost:8000/stats`,
+      type: "GET",
+    };
+    makeRequest(null, requestInfo, (res) => {
+      console.log(res);
+      dispatch(actions.loadedStats(res.action));
+    });
   },
 }))(AdminHome);

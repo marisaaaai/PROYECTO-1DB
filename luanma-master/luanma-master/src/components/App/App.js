@@ -22,7 +22,7 @@ import deleteAlbum from "../AdminHome/Modificaciones/Delete/DeleteAlbum/deleteAl
 import deleteArtista from "../AdminHome/Modificaciones/Delete/DeleteArtista/deleteArtista";
 import deleteSong from "../AdminHome/Modificaciones/Delete/DeleteSong/deleteSongs";
 import modArtista from "../ArtistaHome/Modificaciones/modificaciones";
-import stats from "../AdminHome/Stats/stats";
+import Reportes from "../AdminHome/reportes/reportes";
 import NewPlaylist from "../ComunHome/Playlist/NewPlaylist/newPlaylist";
 import playlist from "../ComunHome/Playlist/playlist";
 import addSongs from "../ComunHome/Playlist/AddSongs/addSongs";
@@ -61,7 +61,7 @@ function App() {
           component={deleteArtista}
         />
         <Route path="/admin-home/mods/delete/song" component={deleteSong} />
-        <Route path="/admin-home/stats" component={stats} />
+        <Route path="/admin-home/stats" component={Reportes} />
         <Route path="/comun-home/new-playlist" component={NewPlaylist} />
         <Route path="/comun-home/playlist" component={playlist} />
         <Route path="/comun-home/add-songsPlaylist" component={addSongs} />
