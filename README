@@ -1,0 +1,9 @@
+Para poder usar este programa debe tener instalado y en uso la version de Node.js de 12.8.3, asimismo postgre :)
+
+Primero debe de descargar el backup de la base de datos e intalarlo en su postgre, luego ir al archivo index de controllers dentro de la carpeta rest_api y cambiar de la linea
+16 a la 26 donde dice password (insertar su password de SQL) y en database colocar el nombre de la base de datos donde hizo el backup.
+
+Para ejecutarlo primero debe de abrir en la cmd la direccion de la carpeta rest_api y 
+luego escribir npm install dentro de la carpeta de rest_api, luego escribir npm start en la carpeta rest_api
+ Se debe de abrir otra pestaña del cmd y decir npm install --global yarn 
+ luego colocar al direccion de la carpeta luanma-master y darn yarn install, luego de eso debe de dar yarn start y listo :)
