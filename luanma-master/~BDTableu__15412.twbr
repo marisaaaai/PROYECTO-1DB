@@ -1,0 +1,1931 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20211.21.0511.0935                               -->
+<workbook source-build='2021.1.2 (20211.21.0511.0935)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelExtractV2.true...ObjectModelExtractV2 />
+    <_.fcp.ObjectModelRelationshipPerfOptions.true...ObjectModelRelationshipPerfOptions />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='album+ (ProyectoDBF)' inline='true' name='federated.0ru2g4n07spj680zoc8go0zncc7l' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='localhost' name='postgres.1tm0prl0wgjac3167wrg41rntcy3'>
+            <connection authentication='username-password' class='postgres' dbname='ProyectoDBF' one-time-sql='' port='5432' server='localhost' username='postgres' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='postgres.1tm0prl0wgjac3167wrg41rntcy3' name='album' table='[public].[album]' type='table' />
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation type='collection'>
+          <relation connection='postgres.1tm0prl0wgjac3167wrg41rntcy3' name='album' table='[public].[album]' type='table' />
+          <relation connection='postgres.1tm0prl0wgjac3167wrg41rntcy3' name='artista' table='[public].[artista]' type='table' />
+          <relation connection='postgres.1tm0prl0wgjac3167wrg41rntcy3' name='cancion' table='[public].[cancion]' type='table' />
+          <relation connection='postgres.1tm0prl0wgjac3167wrg41rntcy3' name='reproducciones' table='[public].[reproducciones]' type='table' />
+          <relation connection='postgres.1tm0prl0wgjac3167wrg41rntcy3' name='usuario' table='[public].[usuario]' type='table' />
+          <relation connection='postgres.1tm0prl0wgjac3167wrg41rntcy3' name='playlist' table='[public].[playlist]' type='table' />
+          <relation connection='postgres.1tm0prl0wgjac3167wrg41rntcy3' name='canciones_playlist' table='[public].[canciones_playlist]' type='table' />
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <cols>
+          <map key='[activada]' value='[cancion].[activada]' />
+          <map key='[album_id (cancion)]' value='[cancion].[album_id]' />
+          <map key='[album_id]' value='[album].[album_id]' />
+          <map key='[artista_id (artista)]' value='[artista].[artista_id]' />
+          <map key='[artista_id (cancion)]' value='[cancion].[artista_id]' />
+          <map key='[artista_id]' value='[album].[artista_id]' />
+          <map key='[cancion_id (canciones_playlist)]' value='[canciones_playlist].[cancion_id]' />
+          <map key='[cancion_id (reproducciones)]' value='[reproducciones].[cancion_id]' />
+          <map key='[cancion_id]' value='[cancion].[cancion_id]' />
+          <map key='[contrasena]' value='[usuario].[contrasena]' />
+          <map key='[correo]' value='[usuario].[correo]' />
+          <map key='[enlace]' value='[cancion].[enlace]' />
+          <map key='[fechaanad (artista)]' value='[artista].[fechaanad]' />
+          <map key='[fechaanad (cancion)]' value='[cancion].[fechaanad]' />
+          <map key='[fechaanad]' value='[album].[fechaanad]' />
+          <map key='[fecharegistro]' value='[usuario].[fecharegistro]' />
+          <map key='[fecharep]' value='[reproducciones].[fecharep]' />
+          <map key='[genero]' value='[cancion].[genero]' />
+          <map key='[id]' value='[usuario].[id]' />
+          <map key='[modificacion (artista)]' value='[artista].[modificacion]' />
+          <map key='[modificacion (cancion)]' value='[cancion].[modificacion]' />
+          <map key='[modificacion]' value='[album].[modificacion]' />
+          <map key='[monitora]' value='[usuario].[monitora]' />
+          <map key='[monitorb]' value='[usuario].[monitorb]' />
+          <map key='[nombre (artista)]' value='[artista].[nombre]' />
+          <map key='[nombre (cancion)]' value='[cancion].[nombre]' />
+          <map key='[nombre (playlist)]' value='[playlist].[nombre]' />
+          <map key='[nombre]' value='[album].[nombre]' />
+          <map key='[nombreusuario]' value='[usuario].[nombreusuario]' />
+          <map key='[playlist_id (canciones_playlist)]' value='[canciones_playlist].[playlist_id]' />
+          <map key='[playlist_id]' value='[playlist].[playlist_id]' />
+          <map key='[suscripcion]' value='[usuario].[suscripcion]' />
+          <map key='[usuario_id (playlist)]' value='[playlist].[usuario_id]' />
+          <map key='[usuario_id (usuario)]' value='[usuario].[usuario_id]' />
+          <map key='[usuario_id]' value='[reproducciones].[usuario_id]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>album_id</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[album_id]</local-name>
+            <parent-name>[album]</parent-name>
+            <remote-alias>album_id</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>false</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[album_8BCE93E70996473E84B84A01DEA1BD8B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>nombre</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[nombre]</local-name>
+            <parent-name>[album]</parent-name>
+            <remote-alias>nombre</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>50</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LES_RES' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[album_8BCE93E70996473E84B84A01DEA1BD8B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>artista_id</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[artista_id]</local-name>
+            <parent-name>[album]</parent-name>
+            <remote-alias>artista_id</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>false</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[album_8BCE93E70996473E84B84A01DEA1BD8B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>fechaanad</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[fechaanad]</local-name>
+            <parent-name>[album]</parent-name>
+            <remote-alias>fechaanad</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[album_8BCE93E70996473E84B84A01DEA1BD8B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>modificacion</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[modificacion]</local-name>
+            <parent-name>[album]</parent-name>
+            <remote-alias>modificacion</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>2147483647</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LES_RES' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[album_8BCE93E70996473E84B84A01DEA1BD8B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>artista_id</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[artista_id (artista)]</local-name>
+            <parent-name>[artista]</parent-name>
+            <remote-alias>artista_id</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>false</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[artista_CB838A16DBD44B748FB65548C2B5D983]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>nombre</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[nombre (artista)]</local-name>
+            <parent-name>[artista]</parent-name>
+            <remote-alias>nombre</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>50</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LES_RES' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[artista_CB838A16DBD44B748FB65548C2B5D983]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>fechaanad</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[fechaanad (artista)]</local-name>
+            <parent-name>[artista]</parent-name>
+            <remote-alias>fechaanad</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[artista_CB838A16DBD44B748FB65548C2B5D983]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>modificacion</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[modificacion (artista)]</local-name>
+            <parent-name>[artista]</parent-name>
+            <remote-alias>modificacion</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>2147483647</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LES_RES' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[artista_CB838A16DBD44B748FB65548C2B5D983]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>cancion_id</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[cancion_id]</local-name>
+            <parent-name>[cancion]</parent-name>
+            <remote-alias>cancion_id</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>false</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cancion_C849C5D46DE34F13B5B343B9A455D212]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>nombre</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[nombre (cancion)]</local-name>
+            <parent-name>[cancion]</parent-name>
+            <remote-alias>nombre</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>50</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LES_RES' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cancion_C849C5D46DE34F13B5B343B9A455D212]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>enlace</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[enlace]</local-name>
+            <parent-name>[cancion]</parent-name>
+            <remote-alias>enlace</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>50</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LES_RES' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cancion_C849C5D46DE34F13B5B343B9A455D212]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>genero</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[genero]</local-name>
+            <parent-name>[cancion]</parent-name>
+            <remote-alias>genero</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>50</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LES_RES' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cancion_C849C5D46DE34F13B5B343B9A455D212]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>artista_id</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[artista_id (cancion)]</local-name>
+            <parent-name>[cancion]</parent-name>
+            <remote-alias>artista_id</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>false</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cancion_C849C5D46DE34F13B5B343B9A455D212]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>album_id</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[album_id (cancion)]</local-name>
+            <parent-name>[cancion]</parent-name>
+            <remote-alias>album_id</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>false</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cancion_C849C5D46DE34F13B5B343B9A455D212]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>activada</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[activada]</local-name>
+            <parent-name>[cancion]</parent-name>
+            <remote-alias>activada</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cancion_C849C5D46DE34F13B5B343B9A455D212]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>fechaanad</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[fechaanad (cancion)]</local-name>
+            <parent-name>[cancion]</parent-name>
+            <remote-alias>fechaanad</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cancion_C849C5D46DE34F13B5B343B9A455D212]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>modificacion</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[modificacion (cancion)]</local-name>
+            <parent-name>[cancion]</parent-name>
+            <remote-alias>modificacion</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>2147483647</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LES_RES' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cancion_C849C5D46DE34F13B5B343B9A455D212]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>cancion_id</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[cancion_id (reproducciones)]</local-name>
+            <parent-name>[reproducciones]</parent-name>
+            <remote-alias>cancion_id</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>false</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[reproducciones_7345AA8935F84FDA8465BFAEAFA55E6F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>usuario_id</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[usuario_id]</local-name>
+            <parent-name>[reproducciones]</parent-name>
+            <remote-alias>usuario_id</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>50</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LES_RES' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[reproducciones_7345AA8935F84FDA8465BFAEAFA55E6F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>fecharep</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[fecharep]</local-name>
+            <parent-name>[reproducciones]</parent-name>
+            <remote-alias>fecharep</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[reproducciones_7345AA8935F84FDA8465BFAEAFA55E6F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>usuario_id</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[usuario_id (usuario)]</local-name>
+            <parent-name>[usuario]</parent-name>
+            <remote-alias>usuario_id</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>50</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LES_RES' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[usuario_34C27BD441DA4F8C99E9462DEDAD19F1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>correo</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[correo]</local-name>
+            <parent-name>[usuario]</parent-name>
+            <remote-alias>correo</remote-alias>
+            <ordinal>27</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>50</width>
+            <contains-null>false</contains-null>
+            <collation flag='0' name='LES_RES' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[usuario_34C27BD441DA4F8C99E9462DEDAD19F1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>contrasena</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[contrasena]</local-name>
+            <parent-name>[usuario]</parent-name>
+            <remote-alias>contrasena</remote-alias>
+            <ordinal>28</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>50</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LES_RES' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[usuario_34C27BD441DA4F8C99E9462DEDAD19F1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>nombreusuario</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[nombreusuario]</local-name>
+            <parent-name>[usuario]</parent-name>
+            <remote-alias>nombreusuario</remote-alias>
+            <ordinal>29</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>50</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LES_RES' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[usuario_34C27BD441DA4F8C99E9462DEDAD19F1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>suscripcion</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[suscripcion]</local-name>
+            <parent-name>[usuario]</parent-name>
+            <remote-alias>suscripcion</remote-alias>
+            <ordinal>30</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[usuario_34C27BD441DA4F8C99E9462DEDAD19F1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>fecharegistro</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[fecharegistro]</local-name>
+            <parent-name>[usuario]</parent-name>
+            <remote-alias>fecharegistro</remote-alias>
+            <ordinal>31</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[usuario_34C27BD441DA4F8C99E9462DEDAD19F1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>monitora</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[monitora]</local-name>
+            <parent-name>[usuario]</parent-name>
+            <remote-alias>monitora</remote-alias>
+            <ordinal>32</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[usuario_34C27BD441DA4F8C99E9462DEDAD19F1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>monitorb</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[monitorb]</local-name>
+            <parent-name>[usuario]</parent-name>
+            <remote-alias>monitorb</remote-alias>
+            <ordinal>33</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[usuario_34C27BD441DA4F8C99E9462DEDAD19F1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>id</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[id]</local-name>
+            <parent-name>[usuario]</parent-name>
+            <remote-alias>id</remote-alias>
+            <ordinal>34</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>false</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[usuario_34C27BD441DA4F8C99E9462DEDAD19F1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>playlist_id</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[playlist_id]</local-name>
+            <parent-name>[playlist]</parent-name>
+            <remote-alias>playlist_id</remote-alias>
+            <ordinal>36</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>false</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[playlist_66501A61292049CEA7D7C773F610F7A8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>nombre</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[nombre (playlist)]</local-name>
+            <parent-name>[playlist]</parent-name>
+            <remote-alias>nombre</remote-alias>
+            <ordinal>37</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>50</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LES_RES' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[playlist_66501A61292049CEA7D7C773F610F7A8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>usuario_id</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[usuario_id (playlist)]</local-name>
+            <parent-name>[playlist]</parent-name>
+            <remote-alias>usuario_id</remote-alias>
+            <ordinal>38</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>50</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LES_RES' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[playlist_66501A61292049CEA7D7C773F610F7A8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>playlist_id</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[playlist_id (canciones_playlist)]</local-name>
+            <parent-name>[canciones_playlist]</parent-name>
+            <remote-alias>playlist_id</remote-alias>
+            <ordinal>40</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>false</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[canciones_playlist_43A4EF7246D74C699B0F0061DE683D1C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>cancion_id</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[cancion_id (canciones_playlist)]</local-name>
+            <parent-name>[canciones_playlist]</parent-name>
+            <remote-alias>cancion_id</remote-alias>
+            <ordinal>41</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>false</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[canciones_playlist_43A4EF7246D74C699B0F0061DE683D1C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <_.fcp.ObjectModelTableType.true...column caption='album' datatype='table' name='[__tableau_internal_object_id__].[album_8BCE93E70996473E84B84A01DEA1BD8B]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='artista' datatype='table' name='[__tableau_internal_object_id__].[artista_CB838A16DBD44B748FB65548C2B5D983]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='cancion' datatype='table' name='[__tableau_internal_object_id__].[cancion_C849C5D46DE34F13B5B343B9A455D212]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='canciones_playlist' datatype='table' name='[__tableau_internal_object_id__].[canciones_playlist_43A4EF7246D74C699B0F0061DE683D1C]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='playlist' datatype='table' name='[__tableau_internal_object_id__].[playlist_66501A61292049CEA7D7C773F610F7A8]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='reproducciones' datatype='table' name='[__tableau_internal_object_id__].[reproducciones_7345AA8935F84FDA8465BFAEAFA55E6F]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='usuario' datatype='table' name='[__tableau_internal_object_id__].[usuario_34C27BD441DA4F8C99E9462DEDAD19F1]' role='measure' type='quantitative' />
+      <column caption='Activada' datatype='integer' name='[activada]' role='measure' type='quantitative' />
+      <column aggregation='Sum' caption='Album Id (Cancion)' datatype='integer' name='[album_id (cancion)]' role='dimension' type='ordinal' />
+      <column caption='Album Id' datatype='integer' name='[album_id]' role='dimension' type='ordinal' />
+      <column aggregation='Sum' caption='Artista Id (Artista)' datatype='integer' name='[artista_id (artista)]' role='dimension' type='ordinal' />
+      <column aggregation='Sum' caption='Artista Id (Cancion)' datatype='integer' name='[artista_id (cancion)]' role='dimension' type='ordinal' />
+      <column aggregation='Sum' caption='Artista Id' datatype='integer' name='[artista_id]' role='dimension' type='ordinal' />
+      <column aggregation='Sum' caption='Cancion Id (Canciones Playlist)' datatype='integer' name='[cancion_id (canciones_playlist)]' role='dimension' type='ordinal' />
+      <column aggregation='Sum' caption='Cancion Id (Reproducciones)' datatype='integer' name='[cancion_id (reproducciones)]' role='dimension' type='ordinal' />
+      <column caption='Cancion Id' datatype='integer' name='[cancion_id]' role='dimension' type='ordinal' />
+      <column caption='Contrasena' datatype='string' name='[contrasena]' role='dimension' type='nominal' />
+      <column caption='Correo' datatype='string' name='[correo]' role='dimension' type='nominal' />
+      <column caption='Enlace' datatype='string' name='[enlace]' role='dimension' type='nominal' />
+      <column caption='Fechaanad (Artista)' datatype='date' name='[fechaanad (artista)]' role='dimension' type='ordinal' />
+      <column caption='Fechaanad (Cancion)' datatype='date' name='[fechaanad (cancion)]' role='dimension' type='ordinal' />
+      <column caption='Fechaanad' datatype='date' name='[fechaanad]' role='dimension' type='ordinal' />
+      <column caption='Fecharegistro' datatype='date' name='[fecharegistro]' role='dimension' type='ordinal' />
+      <column caption='Fecharep' datatype='date' name='[fecharep]' role='dimension' type='ordinal' />
+      <column caption='Genero' datatype='string' name='[genero]' role='dimension' type='nominal' />
+      <column caption='Id' datatype='integer' name='[id]' role='dimension' type='ordinal' />
+      <column caption='Modificacion (Artista)' datatype='string' name='[modificacion (artista)]' role='dimension' type='nominal' />
+      <column caption='Modificacion (Cancion)' datatype='string' name='[modificacion (cancion)]' role='dimension' type='nominal' />
+      <column caption='Modificacion' datatype='string' name='[modificacion]' role='dimension' type='nominal' />
+      <column caption='Monitora' datatype='integer' name='[monitora]' role='measure' type='quantitative' />
+      <column caption='Monitorb' datatype='integer' name='[monitorb]' role='measure' type='quantitative' />
+      <column caption='Nombre (Artista)' datatype='string' name='[nombre (artista)]' role='dimension' type='nominal' />
+      <column caption='Nombre (Cancion)' datatype='string' name='[nombre (cancion)]' role='dimension' type='nominal' />
+      <column caption='Nombre (Playlist)' datatype='string' name='[nombre (playlist)]' role='dimension' type='nominal' />
+      <column caption='Nombre' datatype='string' name='[nombre]' role='dimension' type='nominal' />
+      <column caption='Nombreusuario' datatype='string' name='[nombreusuario]' role='dimension' type='nominal' />
+      <column aggregation='Sum' caption='Playlist Id (Canciones Playlist)' datatype='integer' name='[playlist_id (canciones_playlist)]' role='dimension' type='ordinal' />
+      <column caption='Playlist Id' datatype='integer' name='[playlist_id]' role='dimension' type='ordinal' />
+      <column caption='Suscripcion' datatype='integer' name='[suscripcion]' role='measure' type='quantitative' />
+      <column caption='Usuario Id (Playlist)' datatype='string' name='[usuario_id (playlist)]' role='dimension' type='nominal' />
+      <column caption='Usuario Id (Usuario)' datatype='string' name='[usuario_id (usuario)]' role='dimension' type='nominal' />
+      <column caption='Usuario Id' datatype='string' name='[usuario_id]' role='dimension' type='nominal' />
+      <column-instance column='[fecharep]' derivation='Year-Trunc' name='[tyr:fecharep:ok]' pivot='key' type='ordinal' />
+      <extract _.fcp.ObjectModelExtractV2.true...object-id='' count='-1' enabled='false' units='records'>
+        <connection access_mode='readonly' authentication='auth-none' author-locale='es_ES' class='hyper' dbname='C:/Users/andre/OneDrive/Documentos/PROYECTO-1DB/luanma-master/album+ (ProyectoDBF).hyper' default-settings='yes' schema='Extract' sslmode='' tablename='Extract' update-time='' username='tableau_internal_user'>
+          <_.fcp.ObjectModelEncapsulateLegacy.false...relation name='album_8BCE93E70996473E84B84A01DEA1BD8B' table='[Extract].[album_8BCE93E70996473E84B84A01DEA1BD8B]' type='table' />
+          <_.fcp.ObjectModelEncapsulateLegacy.true...relation type='collection'>
+            <relation name='album_8BCE93E70996473E84B84A01DEA1BD8B' table='[Extract].[album_8BCE93E70996473E84B84A01DEA1BD8B]' type='table' />
+            <relation name='artista_CB838A16DBD44B748FB65548C2B5D983' table='[Extract].[artista_CB838A16DBD44B748FB65548C2B5D983]' type='table' />
+            <relation name='cancion_C849C5D46DE34F13B5B343B9A455D212' table='[Extract].[cancion_C849C5D46DE34F13B5B343B9A455D212]' type='table' />
+            <relation name='reproducciones_7345AA8935F84FDA8465BFAEAFA55E6F' table='[Extract].[reproducciones_7345AA8935F84FDA8465BFAEAFA55E6F]' type='table' />
+            <relation name='usuario_34C27BD441DA4F8C99E9462DEDAD19F1' table='[Extract].[usuario_34C27BD441DA4F8C99E9462DEDAD19F1]' type='table' />
+            <relation name='playlist_66501A61292049CEA7D7C773F610F7A8' table='[Extract].[playlist_66501A61292049CEA7D7C773F610F7A8]' type='table' />
+            <relation name='canciones_playlist_43A4EF7246D74C699B0F0061DE683D1C' table='[Extract].[canciones_playlist_43A4EF7246D74C699B0F0061DE683D1C]' type='table' />
+          </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+          <cols>
+            <map key='[activada]' value='[cancion_C849C5D46DE34F13B5B343B9A455D212].[activada]' />
+            <map key='[album_id (cancion)]' value='[cancion_C849C5D46DE34F13B5B343B9A455D212].[album_id]' />
+            <map key='[album_id]' value='[album_8BCE93E70996473E84B84A01DEA1BD8B].[album_id]' />
+            <map key='[artista_id (artista)]' value='[artista_CB838A16DBD44B748FB65548C2B5D983].[artista_id]' />
+            <map key='[artista_id (cancion)]' value='[cancion_C849C5D46DE34F13B5B343B9A455D212].[artista_id]' />
+            <map key='[artista_id]' value='[album_8BCE93E70996473E84B84A01DEA1BD8B].[artista_id]' />
+            <map key='[cancion_id (canciones_playlist)]' value='[canciones_playlist_43A4EF7246D74C699B0F0061DE683D1C].[cancion_id]' />
+            <map key='[cancion_id (reproducciones)]' value='[reproducciones_7345AA8935F84FDA8465BFAEAFA55E6F].[cancion_id]' />
+            <map key='[cancion_id]' value='[cancion_C849C5D46DE34F13B5B343B9A455D212].[cancion_id]' />
+            <map key='[contrasena]' value='[usuario_34C27BD441DA4F8C99E9462DEDAD19F1].[contrasena]' />
+            <map key='[correo]' value='[usuario_34C27BD441DA4F8C99E9462DEDAD19F1].[correo]' />
+            <map key='[enlace]' value='[cancion_C849C5D46DE34F13B5B343B9A455D212].[enlace]' />
+            <map key='[fechaanad (artista)]' value='[artista_CB838A16DBD44B748FB65548C2B5D983].[fechaanad]' />
+            <map key='[fechaanad (cancion)]' value='[cancion_C849C5D46DE34F13B5B343B9A455D212].[fechaanad]' />
+            <map key='[fechaanad]' value='[album_8BCE93E70996473E84B84A01DEA1BD8B].[fechaanad]' />
+            <map key='[fecharegistro]' value='[usuario_34C27BD441DA4F8C99E9462DEDAD19F1].[fecharegistro]' />
+            <map key='[fecharep]' value='[reproducciones_7345AA8935F84FDA8465BFAEAFA55E6F].[fecharep]' />
+            <map key='[genero]' value='[cancion_C849C5D46DE34F13B5B343B9A455D212].[genero]' />
+            <map key='[id]' value='[usuario_34C27BD441DA4F8C99E9462DEDAD19F1].[id]' />
+            <map key='[modificacion (artista)]' value='[artista_CB838A16DBD44B748FB65548C2B5D983].[modificacion]' />
+            <map key='[modificacion (cancion)]' value='[cancion_C849C5D46DE34F13B5B343B9A455D212].[modificacion]' />
+            <map key='[modificacion]' value='[album_8BCE93E70996473E84B84A01DEA1BD8B].[modificacion]' />
+            <map key='[monitora]' value='[usuario_34C27BD441DA4F8C99E9462DEDAD19F1].[monitora]' />
+            <map key='[monitorb]' value='[usuario_34C27BD441DA4F8C99E9462DEDAD19F1].[monitorb]' />
+            <map key='[nombre (artista)]' value='[artista_CB838A16DBD44B748FB65548C2B5D983].[nombre]' />
+            <map key='[nombre (cancion)]' value='[cancion_C849C5D46DE34F13B5B343B9A455D212].[nombre]' />
+            <map key='[nombre (playlist)]' value='[playlist_66501A61292049CEA7D7C773F610F7A8].[nombre]' />
+            <map key='[nombre]' value='[album_8BCE93E70996473E84B84A01DEA1BD8B].[nombre]' />
+            <map key='[nombreusuario]' value='[usuario_34C27BD441DA4F8C99E9462DEDAD19F1].[nombreusuario]' />
+            <map key='[playlist_id (canciones_playlist)]' value='[canciones_playlist_43A4EF7246D74C699B0F0061DE683D1C].[playlist_id]' />
+            <map key='[playlist_id]' value='[playlist_66501A61292049CEA7D7C773F610F7A8].[playlist_id]' />
+            <map key='[suscripcion]' value='[usuario_34C27BD441DA4F8C99E9462DEDAD19F1].[suscripcion]' />
+            <map key='[usuario_id (playlist)]' value='[playlist_66501A61292049CEA7D7C773F610F7A8].[usuario_id]' />
+            <map key='[usuario_id (usuario)]' value='[usuario_34C27BD441DA4F8C99E9462DEDAD19F1].[usuario_id]' />
+            <map key='[usuario_id]' value='[reproducciones_7345AA8935F84FDA8465BFAEAFA55E6F].[usuario_id]' />
+          </cols>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>album_id</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[album_id]</local-name>
+              <parent-name>[album_8BCE93E70996473E84B84A01DEA1BD8B]</parent-name>
+              <remote-alias>album_id</remote-alias>
+              <ordinal>0</ordinal>
+              <family>album</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>14</approx-count>
+              <contains-null>false</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[album_8BCE93E70996473E84B84A01DEA1BD8B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>nombre</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[nombre]</local-name>
+              <parent-name>[album_8BCE93E70996473E84B84A01DEA1BD8B]</parent-name>
+              <remote-alias>nombre</remote-alias>
+              <ordinal>1</ordinal>
+              <family>album</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>14</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LES_RES' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[album_8BCE93E70996473E84B84A01DEA1BD8B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>artista_id</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[artista_id]</local-name>
+              <parent-name>[album_8BCE93E70996473E84B84A01DEA1BD8B]</parent-name>
+              <remote-alias>artista_id</remote-alias>
+              <ordinal>2</ordinal>
+              <family>album</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>11</approx-count>
+              <contains-null>false</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[album_8BCE93E70996473E84B84A01DEA1BD8B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>fechaanad</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[fechaanad]</local-name>
+              <parent-name>[album_8BCE93E70996473E84B84A01DEA1BD8B]</parent-name>
+              <remote-alias>fechaanad</remote-alias>
+              <ordinal>3</ordinal>
+              <family>album</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>8</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[album_8BCE93E70996473E84B84A01DEA1BD8B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>modificacion</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[modificacion]</local-name>
+              <parent-name>[album_8BCE93E70996473E84B84A01DEA1BD8B]</parent-name>
+              <remote-alias>modificacion</remote-alias>
+              <ordinal>4</ordinal>
+              <family>album</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LES_RES' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[album_8BCE93E70996473E84B84A01DEA1BD8B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>artista_id</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[artista_id (artista)]</local-name>
+              <parent-name>[artista_CB838A16DBD44B748FB65548C2B5D983]</parent-name>
+              <remote-alias>artista_id</remote-alias>
+              <ordinal>5</ordinal>
+              <family>artista</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>11</approx-count>
+              <contains-null>false</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[artista_CB838A16DBD44B748FB65548C2B5D983]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>nombre</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[nombre (artista)]</local-name>
+              <parent-name>[artista_CB838A16DBD44B748FB65548C2B5D983]</parent-name>
+              <remote-alias>nombre</remote-alias>
+              <ordinal>6</ordinal>
+              <family>artista</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>11</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LES_RES' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[artista_CB838A16DBD44B748FB65548C2B5D983]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>fechaanad</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[fechaanad (artista)]</local-name>
+              <parent-name>[artista_CB838A16DBD44B748FB65548C2B5D983]</parent-name>
+              <remote-alias>fechaanad</remote-alias>
+              <ordinal>7</ordinal>
+              <family>artista</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[artista_CB838A16DBD44B748FB65548C2B5D983]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>modificacion</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[modificacion (artista)]</local-name>
+              <parent-name>[artista_CB838A16DBD44B748FB65548C2B5D983]</parent-name>
+              <remote-alias>modificacion</remote-alias>
+              <ordinal>8</ordinal>
+              <family>artista</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LES_RES' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[artista_CB838A16DBD44B748FB65548C2B5D983]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>cancion_id</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[cancion_id]</local-name>
+              <parent-name>[cancion_C849C5D46DE34F13B5B343B9A455D212]</parent-name>
+              <remote-alias>cancion_id</remote-alias>
+              <ordinal>9</ordinal>
+              <family>cancion</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>109</approx-count>
+              <contains-null>false</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cancion_C849C5D46DE34F13B5B343B9A455D212]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>nombre</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[nombre (cancion)]</local-name>
+              <parent-name>[cancion_C849C5D46DE34F13B5B343B9A455D212]</parent-name>
+              <remote-alias>nombre</remote-alias>
+              <ordinal>10</ordinal>
+              <family>cancion</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>104</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LES_RES' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cancion_C849C5D46DE34F13B5B343B9A455D212]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>enlace</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[enlace]</local-name>
+              <parent-name>[cancion_C849C5D46DE34F13B5B343B9A455D212]</parent-name>
+              <remote-alias>enlace</remote-alias>
+              <ordinal>11</ordinal>
+              <family>cancion</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>102</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LES_RES' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cancion_C849C5D46DE34F13B5B343B9A455D212]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>genero</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[genero]</local-name>
+              <parent-name>[cancion_C849C5D46DE34F13B5B343B9A455D212]</parent-name>
+              <remote-alias>genero</remote-alias>
+              <ordinal>12</ordinal>
+              <family>cancion</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>11</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LES_RES' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cancion_C849C5D46DE34F13B5B343B9A455D212]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>artista_id</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[artista_id (cancion)]</local-name>
+              <parent-name>[cancion_C849C5D46DE34F13B5B343B9A455D212]</parent-name>
+              <remote-alias>artista_id</remote-alias>
+              <ordinal>13</ordinal>
+              <family>cancion</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>11</approx-count>
+              <contains-null>false</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cancion_C849C5D46DE34F13B5B343B9A455D212]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>album_id</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[album_id (cancion)]</local-name>
+              <parent-name>[cancion_C849C5D46DE34F13B5B343B9A455D212]</parent-name>
+              <remote-alias>album_id</remote-alias>
+              <ordinal>14</ordinal>
+              <family>cancion</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>12</approx-count>
+              <contains-null>false</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cancion_C849C5D46DE34F13B5B343B9A455D212]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>activada</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[activada]</local-name>
+              <parent-name>[cancion_C849C5D46DE34F13B5B343B9A455D212]</parent-name>
+              <remote-alias>activada</remote-alias>
+              <ordinal>15</ordinal>
+              <family>cancion</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cancion_C849C5D46DE34F13B5B343B9A455D212]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>fechaanad</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[fechaanad (cancion)]</local-name>
+              <parent-name>[cancion_C849C5D46DE34F13B5B343B9A455D212]</parent-name>
+              <remote-alias>fechaanad</remote-alias>
+              <ordinal>16</ordinal>
+              <family>cancion</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cancion_C849C5D46DE34F13B5B343B9A455D212]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>modificacion</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[modificacion (cancion)]</local-name>
+              <parent-name>[cancion_C849C5D46DE34F13B5B343B9A455D212]</parent-name>
+              <remote-alias>modificacion</remote-alias>
+              <ordinal>17</ordinal>
+              <family>cancion</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LES_RES' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cancion_C849C5D46DE34F13B5B343B9A455D212]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>cancion_id</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[cancion_id (reproducciones)]</local-name>
+              <parent-name>[reproducciones_7345AA8935F84FDA8465BFAEAFA55E6F]</parent-name>
+              <remote-alias>cancion_id</remote-alias>
+              <ordinal>18</ordinal>
+              <family>reproducciones</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>109</approx-count>
+              <contains-null>false</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[reproducciones_7345AA8935F84FDA8465BFAEAFA55E6F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>usuario_id</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[usuario_id]</local-name>
+              <parent-name>[reproducciones_7345AA8935F84FDA8465BFAEAFA55E6F]</parent-name>
+              <remote-alias>usuario_id</remote-alias>
+              <ordinal>19</ordinal>
+              <family>reproducciones</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>64</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LES_RES' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[reproducciones_7345AA8935F84FDA8465BFAEAFA55E6F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>fecharep</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[fecharep]</local-name>
+              <parent-name>[reproducciones_7345AA8935F84FDA8465BFAEAFA55E6F]</parent-name>
+              <remote-alias>fecharep</remote-alias>
+              <ordinal>20</ordinal>
+              <family>reproducciones</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>57</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[reproducciones_7345AA8935F84FDA8465BFAEAFA55E6F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>usuario_id</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[usuario_id (usuario)]</local-name>
+              <parent-name>[usuario_34C27BD441DA4F8C99E9462DEDAD19F1]</parent-name>
+              <remote-alias>usuario_id</remote-alias>
+              <ordinal>21</ordinal>
+              <family>usuario</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>88</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LES_RES' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[usuario_34C27BD441DA4F8C99E9462DEDAD19F1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>correo</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[correo]</local-name>
+              <parent-name>[usuario_34C27BD441DA4F8C99E9462DEDAD19F1]</parent-name>
+              <remote-alias>correo</remote-alias>
+              <ordinal>22</ordinal>
+              <family>usuario</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>88</approx-count>
+              <contains-null>false</contains-null>
+              <collation flag='0' name='LES_RES' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[usuario_34C27BD441DA4F8C99E9462DEDAD19F1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>contrasena</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[contrasena]</local-name>
+              <parent-name>[usuario_34C27BD441DA4F8C99E9462DEDAD19F1]</parent-name>
+              <remote-alias>contrasena</remote-alias>
+              <ordinal>23</ordinal>
+              <family>usuario</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>88</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LES_RES' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[usuario_34C27BD441DA4F8C99E9462DEDAD19F1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>nombreusuario</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[nombreusuario]</local-name>
+              <parent-name>[usuario_34C27BD441DA4F8C99E9462DEDAD19F1]</parent-name>
+              <remote-alias>nombreusuario</remote-alias>
+              <ordinal>24</ordinal>
+              <family>usuario</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>88</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LES_RES' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[usuario_34C27BD441DA4F8C99E9462DEDAD19F1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>suscripcion</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[suscripcion]</local-name>
+              <parent-name>[usuario_34C27BD441DA4F8C99E9462DEDAD19F1]</parent-name>
+              <remote-alias>suscripcion</remote-alias>
+              <ordinal>25</ordinal>
+              <family>usuario</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[usuario_34C27BD441DA4F8C99E9462DEDAD19F1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>fecharegistro</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[fecharegistro]</local-name>
+              <parent-name>[usuario_34C27BD441DA4F8C99E9462DEDAD19F1]</parent-name>
+              <remote-alias>fecharegistro</remote-alias>
+              <ordinal>26</ordinal>
+              <family>usuario</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>82</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[usuario_34C27BD441DA4F8C99E9462DEDAD19F1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>monitora</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[monitora]</local-name>
+              <parent-name>[usuario_34C27BD441DA4F8C99E9462DEDAD19F1]</parent-name>
+              <remote-alias>monitora</remote-alias>
+              <ordinal>27</ordinal>
+              <family>usuario</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[usuario_34C27BD441DA4F8C99E9462DEDAD19F1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>monitorb</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[monitorb]</local-name>
+              <parent-name>[usuario_34C27BD441DA4F8C99E9462DEDAD19F1]</parent-name>
+              <remote-alias>monitorb</remote-alias>
+              <ordinal>28</ordinal>
+              <family>usuario</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[usuario_34C27BD441DA4F8C99E9462DEDAD19F1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>id</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[id]</local-name>
+              <parent-name>[usuario_34C27BD441DA4F8C99E9462DEDAD19F1]</parent-name>
+              <remote-alias>id</remote-alias>
+              <ordinal>29</ordinal>
+              <family>usuario</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>64</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[usuario_34C27BD441DA4F8C99E9462DEDAD19F1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>playlist_id</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[playlist_id]</local-name>
+              <parent-name>[playlist_66501A61292049CEA7D7C773F610F7A8]</parent-name>
+              <remote-alias>playlist_id</remote-alias>
+              <ordinal>30</ordinal>
+              <family>playlist</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>false</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[playlist_66501A61292049CEA7D7C773F610F7A8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>nombre</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[nombre (playlist)]</local-name>
+              <parent-name>[playlist_66501A61292049CEA7D7C773F610F7A8]</parent-name>
+              <remote-alias>nombre</remote-alias>
+              <ordinal>31</ordinal>
+              <family>playlist</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LES_RES' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[playlist_66501A61292049CEA7D7C773F610F7A8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>usuario_id</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[usuario_id (playlist)]</local-name>
+              <parent-name>[playlist_66501A61292049CEA7D7C773F610F7A8]</parent-name>
+              <remote-alias>usuario_id</remote-alias>
+              <ordinal>32</ordinal>
+              <family>playlist</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LES_RES' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[playlist_66501A61292049CEA7D7C773F610F7A8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>playlist_id</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[playlist_id (canciones_playlist)]</local-name>
+              <parent-name>[canciones_playlist_43A4EF7246D74C699B0F0061DE683D1C]</parent-name>
+              <remote-alias>playlist_id</remote-alias>
+              <ordinal>33</ordinal>
+              <family>canciones_playlist</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>false</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[canciones_playlist_43A4EF7246D74C699B0F0061DE683D1C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>cancion_id</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[cancion_id (canciones_playlist)]</local-name>
+              <parent-name>[canciones_playlist_43A4EF7246D74C699B0F0061DE683D1C]</parent-name>
+              <remote-alias>cancion_id</remote-alias>
+              <ordinal>34</ordinal>
+              <family>canciones_playlist</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>false</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[canciones_playlist_43A4EF7246D74C699B0F0061DE683D1C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' rowDisplayCount='7' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[tyr:fecharep:ok]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>%null%</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>#2021-01-01 00:00:00#</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>#2012-01-01 00:00:00#</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>#2009-01-01 00:00:00#</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Guatemala&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='album' id='album_8BCE93E70996473E84B84A01DEA1BD8B'>
+            <properties context=''>
+              <relation connection='postgres.1tm0prl0wgjac3167wrg41rntcy3' name='album' table='[public].[album]' type='table' />
+            </properties>
+            <properties context='extract'>
+              <relation name='album_8BCE93E70996473E84B84A01DEA1BD8B' table='[Extract].[album_8BCE93E70996473E84B84A01DEA1BD8B]' type='table' />
+            </properties>
+          </object>
+          <object caption='artista' id='artista_CB838A16DBD44B748FB65548C2B5D983'>
+            <properties context=''>
+              <relation connection='postgres.1tm0prl0wgjac3167wrg41rntcy3' name='artista' table='[public].[artista]' type='table' />
+            </properties>
+            <properties context='extract'>
+              <relation name='artista_CB838A16DBD44B748FB65548C2B5D983' table='[Extract].[artista_CB838A16DBD44B748FB65548C2B5D983]' type='table' />
+            </properties>
+          </object>
+          <object caption='cancion' id='cancion_C849C5D46DE34F13B5B343B9A455D212'>
+            <properties context=''>
+              <relation connection='postgres.1tm0prl0wgjac3167wrg41rntcy3' name='cancion' table='[public].[cancion]' type='table' />
+            </properties>
+            <properties context='extract'>
+              <relation name='cancion_C849C5D46DE34F13B5B343B9A455D212' table='[Extract].[cancion_C849C5D46DE34F13B5B343B9A455D212]' type='table' />
+            </properties>
+          </object>
+          <object caption='canciones_playlist' id='canciones_playlist_43A4EF7246D74C699B0F0061DE683D1C'>
+            <properties context=''>
+              <relation connection='postgres.1tm0prl0wgjac3167wrg41rntcy3' name='canciones_playlist' table='[public].[canciones_playlist]' type='table' />
+            </properties>
+            <properties context='extract'>
+              <relation name='canciones_playlist_43A4EF7246D74C699B0F0061DE683D1C' table='[Extract].[canciones_playlist_43A4EF7246D74C699B0F0061DE683D1C]' type='table' />
+            </properties>
+          </object>
+          <object caption='playlist' id='playlist_66501A61292049CEA7D7C773F610F7A8'>
+            <properties context=''>
+              <relation connection='postgres.1tm0prl0wgjac3167wrg41rntcy3' name='playlist' table='[public].[playlist]' type='table' />
+            </properties>
+            <properties context='extract'>
+              <relation name='playlist_66501A61292049CEA7D7C773F610F7A8' table='[Extract].[playlist_66501A61292049CEA7D7C773F610F7A8]' type='table' />
+            </properties>
+          </object>
+          <object caption='reproducciones' id='reproducciones_7345AA8935F84FDA8465BFAEAFA55E6F'>
+            <properties context=''>
+              <relation connection='postgres.1tm0prl0wgjac3167wrg41rntcy3' name='reproducciones' table='[public].[reproducciones]' type='table' />
+            </properties>
+            <properties context='extract'>
+              <relation name='reproducciones_7345AA8935F84FDA8465BFAEAFA55E6F' table='[Extract].[reproducciones_7345AA8935F84FDA8465BFAEAFA55E6F]' type='table' />
+            </properties>
+          </object>
+          <object caption='usuario' id='usuario_34C27BD441DA4F8C99E9462DEDAD19F1'>
+            <properties context=''>
+              <relation connection='postgres.1tm0prl0wgjac3167wrg41rntcy3' name='usuario' table='[public].[usuario]' type='table' />
+            </properties>
+            <properties context='extract'>
+              <relation name='usuario_34C27BD441DA4F8C99E9462DEDAD19F1' table='[Extract].[usuario_34C27BD441DA4F8C99E9462DEDAD19F1]' type='table' />
+            </properties>
+          </object>
+        </objects>
+        <relationships>
+          <relationship>
+            <expression op='='>
+              <expression op='[artista_id]' />
+              <expression op='[artista_id (artista)]' />
+            </expression>
+            <first-end-point _.fcp.ObjectModelRelationshipPerfOptions.true...is-db-set-guaranteed-value='true' guaranteed-value='true' object-id='album_8BCE93E70996473E84B84A01DEA1BD8B' />
+            <second-end-point _.fcp.ObjectModelRelationshipPerfOptions.true...is-db-set-unique-key='true' object-id='artista_CB838A16DBD44B748FB65548C2B5D983' unique-key='true' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[album_id]' />
+              <expression op='[album_id (cancion)]' />
+            </expression>
+            <first-end-point _.fcp.ObjectModelRelationshipPerfOptions.true...is-db-set-unique-key='true' object-id='album_8BCE93E70996473E84B84A01DEA1BD8B' unique-key='true' />
+            <second-end-point _.fcp.ObjectModelRelationshipPerfOptions.true...is-db-set-guaranteed-value='true' guaranteed-value='true' object-id='cancion_C849C5D46DE34F13B5B343B9A455D212' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[playlist_id]' />
+              <expression op='[playlist_id (canciones_playlist)]' />
+            </expression>
+            <first-end-point _.fcp.ObjectModelRelationshipPerfOptions.true...is-db-set-unique-key='true' object-id='playlist_66501A61292049CEA7D7C773F610F7A8' unique-key='true' />
+            <second-end-point _.fcp.ObjectModelRelationshipPerfOptions.true...is-db-set-guaranteed-value='true' guaranteed-value='true' object-id='canciones_playlist_43A4EF7246D74C699B0F0061DE683D1C' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[usuario_id (usuario)]' />
+              <expression op='[usuario_id (playlist)]' />
+            </expression>
+            <first-end-point object-id='usuario_34C27BD441DA4F8C99E9462DEDAD19F1' />
+            <second-end-point object-id='playlist_66501A61292049CEA7D7C773F610F7A8' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[cancion_id]' />
+              <expression op='[cancion_id (reproducciones)]' />
+            </expression>
+            <first-end-point _.fcp.ObjectModelRelationshipPerfOptions.true...is-db-set-unique-key='true' object-id='cancion_C849C5D46DE34F13B5B343B9A455D212' unique-key='true' />
+            <second-end-point _.fcp.ObjectModelRelationshipPerfOptions.true...is-db-set-guaranteed-value='true' guaranteed-value='true' object-id='reproducciones_7345AA8935F84FDA8465BFAEAFA55E6F' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[usuario_id]' />
+              <expression op='[usuario_id (usuario)]' />
+            </expression>
+            <first-end-point object-id='reproducciones_7345AA8935F84FDA8465BFAEAFA55E6F' />
+            <second-end-point object-id='usuario_34C27BD441DA4F8C99E9462DEDAD19F1' />
+          </relationship>
+        </relationships>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='artistas más reproducidos'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='album+ (ProyectoDBF)' name='federated.0ru2g4n07spj680zoc8go0zncc7l' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0ru2g4n07spj680zoc8go0zncc7l'>
+            <_.fcp.ObjectModelTableType.false...column caption='reproducciones' datatype='integer' name='[__tableau_internal_object_id__].[reproducciones_7345AA8935F84FDA8465BFAEAFA55E6F]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[reproducciones_7345AA8935F84FDA8465BFAEAFA55E6F]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:reproducciones_7345AA8935F84FDA8465BFAEAFA55E6F:qk]' pivot='key' type='quantitative' />
+            <_.fcp.ObjectModelTableType.true...column caption='reproducciones' datatype='table' name='[__tableau_internal_object_id__].[reproducciones_7345AA8935F84FDA8465BFAEAFA55E6F]' role='measure' type='quantitative' />
+            <column caption='Nombre (Artista)' datatype='string' name='[nombre (artista)]' role='dimension' type='nominal' />
+            <column-instance column='[nombre (artista)]' derivation='None' name='[none:nombre (artista):nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#76b7b2' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0ru2g4n07spj680zoc8go0zncc7l].[__tableau_internal_object_id__].[cnt:reproducciones_7345AA8935F84FDA8465BFAEAFA55E6F:qk]</rows>
+        <cols>[federated.0ru2g4n07spj680zoc8go0zncc7l].[none:nombre (artista):nk]</cols>
+      </table>
+      <simple-id uuid='{571FDA25-76E0-4D90-901F-9DF3DEDD489E}' />
+    </worksheet>
+    <worksheet name='pie chart géneros más reproducido'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='album+ (ProyectoDBF)' name='federated.0ru2g4n07spj680zoc8go0zncc7l' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0ru2g4n07spj680zoc8go0zncc7l'>
+            <_.fcp.ObjectModelTableType.false...column caption='reproducciones' datatype='integer' name='[__tableau_internal_object_id__].[reproducciones_7345AA8935F84FDA8465BFAEAFA55E6F]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[reproducciones_7345AA8935F84FDA8465BFAEAFA55E6F]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:reproducciones_7345AA8935F84FDA8465BFAEAFA55E6F:qk]' pivot='key' type='quantitative' />
+            <_.fcp.ObjectModelTableType.true...column caption='reproducciones' datatype='table' name='[__tableau_internal_object_id__].[reproducciones_7345AA8935F84FDA8465BFAEAFA55E6F]' role='measure' type='quantitative' />
+            <column caption='Genero' datatype='string' name='[genero]' role='dimension' type='nominal' />
+            <column-instance column='[genero]' derivation='None' name='[none:genero:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.0ru2g4n07spj680zoc8go0zncc7l].[__tableau_internal_object_id__].[cnt:reproducciones_7345AA8935F84FDA8465BFAEAFA55E6F:qk]' included-values='in-range' />
+          <slices>
+            <column>[federated.0ru2g4n07spj680zoc8go0zncc7l].[__tableau_internal_object_id__].[cnt:reproducciones_7345AA8935F84FDA8465BFAEAFA55E6F:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Pie' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.0ru2g4n07spj680zoc8go0zncc7l].[none:genero:nk]' />
+              <wedge-size column='[federated.0ru2g4n07spj680zoc8go0zncc7l].[__tableau_internal_object_id__].[cnt:reproducciones_7345AA8935F84FDA8465BFAEAFA55E6F:qk]' />
+              <size column='[federated.0ru2g4n07spj680zoc8go0zncc7l].[__tableau_internal_object_id__].[cnt:reproducciones_7345AA8935F84FDA8465BFAEAFA55E6F:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='1.8790607452392578' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{12AA82D4-3E78-4E8D-803D-B8607B07E589}' />
+    </worksheet>
+    <worksheet name='rec cancion (flt año, nombreA,ca.,ID)'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>&lt;Recuento de canciones&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='album+ (ProyectoDBF)' name='federated.0ru2g4n07spj680zoc8go0zncc7l' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0ru2g4n07spj680zoc8go0zncc7l'>
+            <_.fcp.ObjectModelTableType.true...column caption='cancion' datatype='table' name='[__tableau_internal_object_id__].[cancion_C849C5D46DE34F13B5B343B9A455D212]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[cancion_C849C5D46DE34F13B5B343B9A455D212]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:cancion_C849C5D46DE34F13B5B343B9A455D212:qk]' pivot='key' type='quantitative' />
+            <column aggregation='Sum' caption='Cancion Id (Reproducciones)' datatype='integer' name='[cancion_id (reproducciones)]' role='dimension' type='ordinal' />
+            <column caption='Fecharep' datatype='date' name='[fecharep]' role='dimension' type='ordinal' />
+            <column caption='Nombre (Artista)' datatype='string' name='[nombre (artista)]' role='dimension' type='nominal' />
+            <column caption='Nombre (Cancion)' datatype='string' name='[nombre (cancion)]' role='dimension' type='nominal' />
+            <column-instance column='[cancion_id (reproducciones)]' derivation='None' name='[none:cancion_id (reproducciones):ok]' pivot='key' type='ordinal' />
+            <column-instance column='[nombre (artista)]' derivation='None' name='[none:nombre (artista):nk]' pivot='key' type='nominal' />
+            <column-instance column='[nombre (cancion)]' derivation='None' name='[none:nombre (cancion):nk]' pivot='key' type='nominal' />
+            <column-instance column='[fecharep]' derivation='Year' name='[yr:fecharep:ok]' pivot='key' type='ordinal' />
+            <_.fcp.ObjectModelTableType.false...column caption='cancion' datatype='integer' name='[__tableau_internal_object_id__].[cancion_C849C5D46DE34F13B5B343B9A455D212]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='size-bar' field='[federated.0ru2g4n07spj680zoc8go0zncc7l].[__tableau_internal_object_id__].[cnt:cancion_C849C5D46DE34F13B5B343B9A455D212:qk]' field-type='quantitative' max-size='1' min-size='0.005' type='centersize' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#f17b79' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.0ru2g4n07spj680zoc8go0zncc7l].[none:nombre (artista):nk] / ([federated.0ru2g4n07spj680zoc8go0zncc7l].[none:nombre (cancion):nk] / [federated.0ru2g4n07spj680zoc8go0zncc7l].[none:cancion_id (reproducciones):ok]))</rows>
+        <cols>([federated.0ru2g4n07spj680zoc8go0zncc7l].[yr:fecharep:ok] * [federated.0ru2g4n07spj680zoc8go0zncc7l].[__tableau_internal_object_id__].[cnt:cancion_C849C5D46DE34F13B5B343B9A455D212:qk])</cols>
+      </table>
+      <simple-id uuid='{813AC8A2-F275-409B-91E2-92DCE0270E66}' />
+    </worksheet>
+    <worksheet name='registro por dia de la semana'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='album+ (ProyectoDBF)' name='federated.0ru2g4n07spj680zoc8go0zncc7l' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0ru2g4n07spj680zoc8go0zncc7l'>
+            <_.fcp.ObjectModelTableType.false...column caption='usuario' datatype='integer' name='[__tableau_internal_object_id__].[usuario_34C27BD441DA4F8C99E9462DEDAD19F1]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[usuario_34C27BD441DA4F8C99E9462DEDAD19F1]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:usuario_34C27BD441DA4F8C99E9462DEDAD19F1:qk]' pivot='key' type='quantitative' />
+            <_.fcp.ObjectModelTableType.true...column caption='usuario' datatype='table' name='[__tableau_internal_object_id__].[usuario_34C27BD441DA4F8C99E9462DEDAD19F1]' role='measure' type='quantitative' />
+            <column caption='Fecharegistro' datatype='date' name='[fecharegistro]' role='dimension' type='ordinal' />
+            <column-instance column='[fecharegistro]' derivation='Weekday' name='[wd:fecharegistro:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.0ru2g4n07spj680zoc8go0zncc7l].[__tableau_internal_object_id__].[cnt:usuario_34C27BD441DA4F8C99E9462DEDAD19F1:qk]</rows>
+        <cols>[federated.0ru2g4n07spj680zoc8go0zncc7l].[wd:fecharegistro:qk]</cols>
+      </table>
+      <simple-id uuid='{0C5C3573-6D5F-46E0-AA7F-932D2C334923}' />
+    </worksheet>
+    <worksheet name='registro por mes'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='album+ (ProyectoDBF)' name='federated.0ru2g4n07spj680zoc8go0zncc7l' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0ru2g4n07spj680zoc8go0zncc7l'>
+            <_.fcp.ObjectModelTableType.false...column caption='usuario' datatype='integer' name='[__tableau_internal_object_id__].[usuario_34C27BD441DA4F8C99E9462DEDAD19F1]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[usuario_34C27BD441DA4F8C99E9462DEDAD19F1]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:usuario_34C27BD441DA4F8C99E9462DEDAD19F1:qk]' pivot='key' type='quantitative' />
+            <_.fcp.ObjectModelTableType.true...column caption='usuario' datatype='table' name='[__tableau_internal_object_id__].[usuario_34C27BD441DA4F8C99E9462DEDAD19F1]' role='measure' type='quantitative' />
+            <column caption='Fecharegistro' datatype='date' name='[fecharegistro]' role='dimension' type='ordinal' />
+            <column-instance column='[fecharegistro]' derivation='Month' name='[mn:fecharegistro:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#72b966' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0ru2g4n07spj680zoc8go0zncc7l].[__tableau_internal_object_id__].[cnt:usuario_34C27BD441DA4F8C99E9462DEDAD19F1:qk]</rows>
+        <cols>[federated.0ru2g4n07spj680zoc8go0zncc7l].[mn:fecharegistro:ok]</cols>
+      </table>
+      <simple-id uuid='{50F1AD6B-0930-44B9-A48A-9DE9C6ED7028}' />
+    </worksheet>
+    <worksheet name='registros por año'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='album+ (ProyectoDBF)' name='federated.0ru2g4n07spj680zoc8go0zncc7l' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0ru2g4n07spj680zoc8go0zncc7l'>
+            <_.fcp.ObjectModelTableType.false...column caption='usuario' datatype='integer' name='[__tableau_internal_object_id__].[usuario_34C27BD441DA4F8C99E9462DEDAD19F1]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[usuario_34C27BD441DA4F8C99E9462DEDAD19F1]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:usuario_34C27BD441DA4F8C99E9462DEDAD19F1:qk]' pivot='key' type='quantitative' />
+            <_.fcp.ObjectModelTableType.true...column caption='usuario' datatype='table' name='[__tableau_internal_object_id__].[usuario_34C27BD441DA4F8C99E9462DEDAD19F1]' role='measure' type='quantitative' />
+            <column caption='Fecharegistro' datatype='date' name='[fecharegistro]' role='dimension' type='ordinal' />
+            <column-instance column='[fecharegistro]' derivation='Year' name='[yr:fecharegistro:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#a7acad' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0ru2g4n07spj680zoc8go0zncc7l].[__tableau_internal_object_id__].[cnt:usuario_34C27BD441DA4F8C99E9462DEDAD19F1:qk]</rows>
+        <cols>[federated.0ru2g4n07spj680zoc8go0zncc7l].[yr:fecharegistro:ok]</cols>
+      </table>
+      <simple-id uuid='{C3CD922A-D8FC-47B4-BCE1-E65DC89D7946}' />
+    </worksheet>
+    <worksheet name='reproducciones de álbumes por artista'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='album+ (ProyectoDBF)' name='federated.0ru2g4n07spj680zoc8go0zncc7l' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0ru2g4n07spj680zoc8go0zncc7l'>
+            <_.fcp.ObjectModelTableType.false...column caption='reproducciones' datatype='integer' name='[__tableau_internal_object_id__].[reproducciones_7345AA8935F84FDA8465BFAEAFA55E6F]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[reproducciones_7345AA8935F84FDA8465BFAEAFA55E6F]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:reproducciones_7345AA8935F84FDA8465BFAEAFA55E6F:qk]' pivot='key' type='quantitative' />
+            <_.fcp.ObjectModelTableType.true...column caption='reproducciones' datatype='table' name='[__tableau_internal_object_id__].[reproducciones_7345AA8935F84FDA8465BFAEAFA55E6F]' role='measure' type='quantitative' />
+            <column caption='Nombre (Artista)' datatype='string' name='[nombre (artista)]' role='dimension' type='nominal' />
+            <column caption='Nombre' datatype='string' name='[nombre]' role='dimension' type='nominal' />
+            <column-instance column='[nombre (artista)]' derivation='None' name='[none:nombre (artista):nk]' pivot='key' type='nominal' />
+            <column-instance column='[nombre]' derivation='None' name='[none:nombre:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0ru2g4n07spj680zoc8go0zncc7l].[none:nombre:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.0ru2g4n07spj680zoc8go0zncc7l].[__tableau_internal_object_id__].[cnt:reproducciones_7345AA8935F84FDA8465BFAEAFA55E6F:qk]</rows>
+        <cols>([federated.0ru2g4n07spj680zoc8go0zncc7l].[none:nombre (artista):nk] / [federated.0ru2g4n07spj680zoc8go0zncc7l].[none:nombre:nk])</cols>
+      </table>
+      <simple-id uuid='{6EDBF942-B161-4194-B13F-2337918C0D45}' />
+    </worksheet>
+    <worksheet name='reproducciones por año'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='album+ (ProyectoDBF)' name='federated.0ru2g4n07spj680zoc8go0zncc7l' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0ru2g4n07spj680zoc8go0zncc7l'>
+            <_.fcp.ObjectModelTableType.false...column caption='reproducciones' datatype='integer' name='[__tableau_internal_object_id__].[reproducciones_7345AA8935F84FDA8465BFAEAFA55E6F]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[reproducciones_7345AA8935F84FDA8465BFAEAFA55E6F]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:reproducciones_7345AA8935F84FDA8465BFAEAFA55E6F:qk]' pivot='key' type='quantitative' />
+            <_.fcp.ObjectModelTableType.true...column caption='reproducciones' datatype='table' name='[__tableau_internal_object_id__].[reproducciones_7345AA8935F84FDA8465BFAEAFA55E6F]' role='measure' type='quantitative' />
+            <column caption='Fecharep' datatype='date' name='[fecharep]' role='dimension' type='ordinal' />
+            <column-instance column='[fecharep]' derivation='Year' name='[yr:fecharep:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#c290b4' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0ru2g4n07spj680zoc8go0zncc7l].[__tableau_internal_object_id__].[cnt:reproducciones_7345AA8935F84FDA8465BFAEAFA55E6F:qk]</rows>
+        <cols>[federated.0ru2g4n07spj680zoc8go0zncc7l].[yr:fecharep:ok]</cols>
+      </table>
+      <simple-id uuid='{B2C1D4ED-1A01-4EF0-B16B-A2D817C13E58}' />
+    </worksheet>
+    <worksheet name='reproducciones por día de la semana'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='album+ (ProyectoDBF)' name='federated.0ru2g4n07spj680zoc8go0zncc7l' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0ru2g4n07spj680zoc8go0zncc7l'>
+            <_.fcp.ObjectModelTableType.false...column caption='reproducciones' datatype='integer' name='[__tableau_internal_object_id__].[reproducciones_7345AA8935F84FDA8465BFAEAFA55E6F]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[reproducciones_7345AA8935F84FDA8465BFAEAFA55E6F]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:reproducciones_7345AA8935F84FDA8465BFAEAFA55E6F:qk]' pivot='key' type='quantitative' />
+            <_.fcp.ObjectModelTableType.true...column caption='reproducciones' datatype='table' name='[__tableau_internal_object_id__].[reproducciones_7345AA8935F84FDA8465BFAEAFA55E6F]' role='measure' type='quantitative' />
+            <column caption='Fecharep' datatype='date' name='[fecharep]' role='dimension' type='ordinal' />
+            <column-instance column='[fecharep]' derivation='Weekday' name='[wd:fecharep:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='size-bar' field='[federated.0ru2g4n07spj680zoc8go0zncc7l].[__tableau_internal_object_id__].[cnt:reproducciones_7345AA8935F84FDA8465BFAEAFA55E6F:qk]' field-type='quantitative' max-size='1' min-size='0.005' type='centersize' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Area' />
+          </pane>
+        </panes>
+        <rows>[federated.0ru2g4n07spj680zoc8go0zncc7l].[__tableau_internal_object_id__].[cnt:reproducciones_7345AA8935F84FDA8465BFAEAFA55E6F:qk]</rows>
+        <cols>[federated.0ru2g4n07spj680zoc8go0zncc7l].[wd:fecharep:ok]</cols>
+      </table>
+      <simple-id uuid='{08BBD6BA-1B72-4499-B40C-099DDD999A0D}' />
+    </worksheet>
+    <worksheet name='reproducciones por mes'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='album+ (ProyectoDBF)' name='federated.0ru2g4n07spj680zoc8go0zncc7l' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0ru2g4n07spj680zoc8go0zncc7l'>
+            <_.fcp.ObjectModelTableType.false...column caption='reproducciones' datatype='integer' name='[__tableau_internal_object_id__].[reproducciones_7345AA8935F84FDA8465BFAEAFA55E6F]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[reproducciones_7345AA8935F84FDA8465BFAEAFA55E6F]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:reproducciones_7345AA8935F84FDA8465BFAEAFA55E6F:qk]' pivot='key' type='quantitative' />
+            <_.fcp.ObjectModelTableType.true...column caption='reproducciones' datatype='table' name='[__tableau_internal_object_id__].[reproducciones_7345AA8935F84FDA8465BFAEAFA55E6F]' role='measure' type='quantitative' />
+            <column caption='Fecharep' datatype='date' name='[fecharep]' role='dimension' type='ordinal' />
+            <column-instance column='[fecharep]' derivation='Month' name='[mn:fecharep:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#f9a655' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0ru2g4n07spj680zoc8go0zncc7l].[__tableau_internal_object_id__].[cnt:reproducciones_7345AA8935F84FDA8465BFAEAFA55E6F:qk]</rows>
+        <cols>[federated.0ru2g4n07spj680zoc8go0zncc7l].[mn:fecharep:ok]</cols>
+      </table>
+      <simple-id uuid='{1C1E003B-14BE-40DB-9AD9-8C01FE79A023}' />
+    </worksheet>
+  </worksheets>
+  <windows saved-dpi-scale-factor='1.25' source-height='37'>
+    <window class='worksheet' name='rec cancion (flt año, nombreA,ca.,ID)'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{0EA5EC95-2E37-484E-9E23-EC18380379F7}' />
+    </window>
+    <window class='worksheet' name='artistas más reproducidos'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{0E764559-802C-4E07-9225-D4529E4AC03F}' />
+    </window>
+    <window class='worksheet' name='pie chart géneros más reproducido'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='173'>
+            <card param='[federated.0ru2g4n07spj680zoc8go0zncc7l].[__tableau_internal_object_id__].[cnt:reproducciones_7345AA8935F84FDA8465BFAEAFA55E6F:qk]' show-domain='false' show-null-ctrls='false' type='filter' />
+            <card pane-specification-id='0' param='[federated.0ru2g4n07spj680zoc8go0zncc7l].[none:genero:nk]' type='color' />
+            <card pane-specification-id='0' param='[federated.0ru2g4n07spj680zoc8go0zncc7l].[__tableau_internal_object_id__].[cnt:reproducciones_7345AA8935F84FDA8465BFAEAFA55E6F:qk]' type='size' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{5CDBDA6E-A39C-4714-8B0D-A55E445F7984}' />
+    </window>
+    <window class='worksheet' name='reproducciones de álbumes por artista'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='173'>
+            <card pane-specification-id='0' param='[federated.0ru2g4n07spj680zoc8go0zncc7l].[none:nombre:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{4F09A83F-5364-4E95-A04D-7455A44145B8}' />
+    </window>
+    <window class='worksheet' maximized='true' name='reproducciones por año'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{50DB7DEC-E8A5-41B0-87FA-E42DFDA28355}' />
+    </window>
+    <window class='worksheet' name='reproducciones por mes'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{EAA7EA40-5931-492A-95E8-AA2CA7B974C9}' />
+    </window>
+    <window class='worksheet' name='reproducciones por día de la semana'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{135D80A8-7048-4868-AAC4-2988731640B2}' />
+    </window>
+    <window class='worksheet' name='registros por año'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{D22B39F7-2988-434B-BC2E-22DBF599F80E}' />
+    </window>
+    <window class='worksheet' name='registro por mes'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{674BA27C-491E-4948-A8C4-EB5208632EE4}' />
+    </window>
+    <window class='worksheet' name='registro por dia de la semana'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{86DCB413-5F9B-4200-A631-CDD3B2D85D3E}' />
+    </window>
+  </windows>
+</workbook>
